@@ -1,0 +1,50 @@
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+from typing import List, Optional
+from typing_extensions import Literal
+
+from .._models import BaseModel
+
+__all__ = ["BgpAsPath", "Segment"]
+
+
+class Segment(BaseModel):
+    as_numbers: Optional[List[int]] = None
+    """The AS numbers in this AS path segment."""
+
+    type: Optional[Literal["as_seq", "as_set", "as_confed_seq", "as_confed_set"]] = None
+    """
+    AS sequence is the most common type of AS_PATH, it contains the list of ASNs
+    starting with the most recent ASN being added read from left to right. The other
+    three AS_PATH types are used for Confederations - AS_SET is the type of AS_PATH
+    attribute that summarizes routes using using the aggregate-address command,
+    allowing AS_PATHs to be summarized in the update as well. - AS_CONFED_SEQ gives
+    the list of ASNs in the path starting with the most recent ASN to be added
+    reading left to right - AS_CONFED_SET will allow summarization of multiple AS
+    PATHs to be sent in BGP Updates.
+    """
+
+
+class BgpAsPath(BaseModel):
+    as_set_mode: Optional[
+        Literal[
+            "do_not_include_local_as",
+            "include_as_seq",
+            "include_as_set",
+            "include_as_confed_seq",
+            "include_as_confed_set",
+            "prepend_to_first_segment",
+        ]
+    ] = None
+    """Defines how the Local AS should be included in the MP REACH NLRI.
+
+    For iBGP sessions, "Do Not Include Local AS" must be chosen. For eBGP sessions,
+    any choice other than "Do Not Include Local AS" can be chosen.
+    """
+
+    segments: Optional[List[Segment]] = None
+    """The additional AS path segments to be added in the NLRI.
+
+    By default, an empty AS path is always included and the local AS is added to it
+    as per the value of 'as_set_mode' attribute.
+    """
