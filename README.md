@@ -1,6 +1,6 @@
 # Devknot Python API library
 
-[![PyPI version](https://img.shields.io/pypi/v/devknot.svg)](https://pypi.org/project/devknot/)
+[![PyPI version](https://img.shields.io/pypi/v/testSDk.svg)](https://pypi.org/project/testSDk/)
 
 The Devknot Python library provides convenient access to the Devknot REST API from any Python 3.8+
 application. The library includes type definitions for all request params and response fields,
@@ -15,12 +15,9 @@ The REST API documentation can be found on [github.com](https://github.com/open-
 ## Installation
 
 ```sh
-# install from the production repo
-pip install git+ssh://git@github.com/h4ndzdatm0ld/testSDk.git
+# install from PyPI
+pip install --pre testSDk
 ```
-
-> [!NOTE]
-> Once this package is [published to PyPI](https://app.stainless.com/docs/guides/publish), this will become: `pip install --pre devknot`
 
 ## Usage
 
