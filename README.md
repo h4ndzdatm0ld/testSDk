@@ -83,13 +83,7 @@ from devknot import Devknot
 client = Devknot()
 
 config = client.config.create(
-    events={
-        "cp_events": {"enable": True},
-        "dp_events": {
-            "enable": True,
-            "rx_rate_threshold": 0,
-        },
-    },
+    events={},
 )
 print(config.events)
 ```
