@@ -1,6 +1,6 @@
 # Devknot Python API library
 
-[![PyPI version](https://img.shields.io/pypi/v/devknot.svg)](https://pypi.org/project/devknot/)
+[![PyPI version](<https://img.shields.io/pypi/v/testSDk.svg?label=pypi%20(stable)>)](https://pypi.org/project/testSDk/)
 
 The Devknot Python library provides convenient access to the Devknot REST API from any Python 3.8+
 application. The library includes type definitions for all request params and response fields,
@@ -15,12 +15,9 @@ The REST API documentation can be found on [github.com](https://github.com/open-
 ## Installation
 
 ```sh
-# install from this staging repo
-pip install git+ssh://git@github.com/stainless-sdks/devknot-python.git
+# install from PyPI
+pip install --pre testSDk
 ```
-
-> [!NOTE]
-> Once this package is [published to PyPI](https://app.stainless.com/docs/guides/publish), this will become: `pip install --pre devknot`
 
 ## Usage
 
@@ -67,6 +64,38 @@ asyncio.run(main())
 
 Functionality between the synchronous and asynchronous clients is otherwise identical.
 
+### With aiohttp
+
+By default, the async client uses `httpx` for HTTP requests. However, for improved concurrency performance you may also use `aiohttp` as the HTTP backend.
+
+You can enable this by installing `aiohttp`:
+
+```sh
+# install from PyPI
+pip install --pre testSDk[aiohttp]
+```
+
+Then you can enable it by instantiating the client with `http_client=DefaultAioHttpClient()`:
+
+```python
+import os
+import asyncio
+from devknot import DefaultAioHttpClient
+from devknot import AsyncDevknot
+
+
+async def main() -> None:
+    async with AsyncDevknot(
+        api_key=os.environ.get("DEVKNOT_API_KEY"),  # This is the default and can be omitted
+        http_client=DefaultAioHttpClient(),
+    ) as client:
+        config = await client.config.create()
+        print(config.warnings)
+
+
+asyncio.run(main())
+```
+
 ## Using types
 
 Nested request parameters are [TypedDicts](https://docs.python.org/3/library/typing.html#typing.TypedDict). Responses are [Pydantic models](https://docs.pydantic.dev) which also provide helper methods for things like:
@@ -86,13 +115,7 @@ from devknot import Devknot
 client = Devknot()
 
 config = client.config.create(
-    events={
-        "cp_events": {"enable": True},
-        "dp_events": {
-            "enable": True,
-            "rx_rate_threshold": 0,
-        },
-    },
+    events={},
 )
 print(config.events)
 ```
@@ -162,7 +185,7 @@ client.with_options(max_retries=5).config.create()
 ### Timeouts
 
 By default requests time out after 1 minute. You can configure this with a `timeout` option,
-which accepts a float or an [`httpx.Timeout`](https://www.python-httpx.org/advanced/#fine-tuning-the-configuration) object:
+which accepts a float or an [`httpx.Timeout`](https://www.python-httpx.org/advanced/timeouts/#fine-tuning-the-configuration) object:
 
 ```python
 from devknot import Devknot
@@ -227,9 +250,9 @@ config = response.parse()  # get the object that `config.create()` would have re
 print(config.warnings)
 ```
 
-These methods return an [`APIResponse`](https://github.com/stainless-sdks/devknot-python/tree/main/src/devknot/_response.py) object.
+These methods return an [`APIResponse`](https://github.com/h4ndzdatm0ld/testSDk/tree/main/src/devknot/_response.py) object.
 
-The async client returns an [`AsyncAPIResponse`](https://github.com/stainless-sdks/devknot-python/tree/main/src/devknot/_response.py) with the same structure, the only difference being `await`able methods for reading the response content.
+The async client returns an [`AsyncAPIResponse`](https://github.com/h4ndzdatm0ld/testSDk/tree/main/src/devknot/_response.py) with the same structure, the only difference being `await`able methods for reading the response content.
 
 #### `.with_streaming_response`
 
@@ -333,7 +356,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/devknot-python/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/h4ndzdatm0ld/testSDk/issues) with questions, bugs, or suggestions.
 
 ### Determining the installed version
 

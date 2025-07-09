@@ -188,7 +188,7 @@ class TestControl:
                     "ping": {
                         "requests": [
                             {
-                                "dst_ip": "dst_ip",
+                                "dst_ip": "192.168.1.1",
                                 "src_name": "src_name",
                             }
                         ]
@@ -199,7 +199,7 @@ class TestControl:
                     "ping": {
                         "requests": [
                             {
-                                "dst_ip": "dst_ip",
+                                "dst_ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                 "src_name": "src_name",
                             }
                         ]
@@ -237,7 +237,9 @@ class TestControl:
 
 
 class TestAsyncControl:
-    parametrize = pytest.mark.parametrize("async_client", [False, True], indirect=True, ids=["loose", "strict"])
+    parametrize = pytest.mark.parametrize(
+        "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
+    )
 
     @pytest.mark.skip()
     @parametrize
@@ -407,7 +409,7 @@ class TestAsyncControl:
                     "ping": {
                         "requests": [
                             {
-                                "dst_ip": "dst_ip",
+                                "dst_ip": "192.168.1.1",
                                 "src_name": "src_name",
                             }
                         ]
@@ -418,7 +420,7 @@ class TestAsyncControl:
                     "ping": {
                         "requests": [
                             {
-                                "dst_ip": "dst_ip",
+                                "dst_ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                 "src_name": "src_name",
                             }
                         ]

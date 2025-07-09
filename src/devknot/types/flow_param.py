@@ -403,7 +403,7 @@ class SizeWeightPairs(TypedDict, total=False):
     predefined: Literal["imix", "ipsec_imix", "ipv6_imix", "standard_imix", "tcp_imix"]
     """
     Specify predefined frame size distribution <size, weight> pairs (including IMIX
-    distribution).  
+    distribution).
     The available predefined distribution pairs are:
 
     - IMIX (64:7, 570:4, and 1518:1)

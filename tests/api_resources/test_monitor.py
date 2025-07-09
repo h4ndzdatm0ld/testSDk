@@ -229,7 +229,7 @@ class TestMonitor:
                 "bgp_peer_names": ["string"],
                 "ipv4_unicast_filters": [
                     {
-                        "addresses": ["string"],
+                        "addresses": ["192.168.1.1"],
                         "origin": "igp",
                         "path_id": 0,
                         "prefix_length": 128,
@@ -237,7 +237,7 @@ class TestMonitor:
                 ],
                 "ipv6_unicast_filters": [
                     {
-                        "addresses": ["string"],
+                        "addresses": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                         "origin": "igp",
                         "path_id": 0,
                         "prefix_length": 128,
@@ -287,7 +287,9 @@ class TestMonitor:
 
 
 class TestAsyncMonitor:
-    parametrize = pytest.mark.parametrize("async_client", [False, True], indirect=True, ids=["loose", "strict"])
+    parametrize = pytest.mark.parametrize(
+        "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
+    )
 
     @pytest.mark.skip()
     @parametrize
@@ -490,7 +492,7 @@ class TestAsyncMonitor:
                 "bgp_peer_names": ["string"],
                 "ipv4_unicast_filters": [
                     {
-                        "addresses": ["string"],
+                        "addresses": ["192.168.1.1"],
                         "origin": "igp",
                         "path_id": 0,
                         "prefix_length": 128,
@@ -498,7 +500,7 @@ class TestAsyncMonitor:
                 ],
                 "ipv6_unicast_filters": [
                     {
-                        "addresses": ["string"],
+                        "addresses": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                         "origin": "igp",
                         "path_id": 0,
                         "prefix_length": 128,

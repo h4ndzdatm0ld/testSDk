@@ -23,17 +23,16 @@ from pydantic import ValidationError
 
 from devknot import Devknot, AsyncDevknot, APIResponseValidationError
 from devknot._types import Omit
-from devknot._utils import maybe_transform
 from devknot._models import BaseModel, FinalRequestOptions
-from devknot._constants import RAW_RESPONSE_HEADER
 from devknot._exceptions import APIStatusError, APITimeoutError, APIResponseValidationError
 from devknot._base_client import (
     DEFAULT_TIMEOUT,
     HTTPX_DEFAULT_TIMEOUT,
     BaseClient,
+    DefaultHttpxClient,
+    DefaultAsyncHttpxClient,
     make_request_options,
 )
-from devknot.types.config_create_params import ConfigCreateParams
 
 from .utils import update_env
 
@@ -192,6 +191,7 @@ class TestDevknot:
             copy_param = copy_signature.parameters.get(name)
             assert copy_param is not None, f"copy() signature is missing the {name} param"
 
+    @pytest.mark.skipif(sys.version_info >= (3, 10), reason="fails because of a memory leak that started from 3.12")
     def test_copy_build_request(self) -> None:
         options = FinalRequestOptions(method="get", url="/foo")
 
@@ -720,32 +720,21 @@ class TestDevknot:
 
     @mock.patch("devknot._base_client.BaseClient._calculate_retry_timeout", _low_retry_timeout)
     @pytest.mark.respx(base_url=base_url)
-    def test_retrying_timeout_errors_doesnt_leak(self, respx_mock: MockRouter) -> None:
+    def test_retrying_timeout_errors_doesnt_leak(self, respx_mock: MockRouter, client: Devknot) -> None:
         respx_mock.post("/config").mock(side_effect=httpx.TimeoutException("Test timeout error"))
 
         with pytest.raises(APITimeoutError):
-            self.client.post(
-                "/config",
-                body=cast(object, maybe_transform({}, ConfigCreateParams)),
-                cast_to=httpx.Response,
-                options={"headers": {RAW_RESPONSE_HEADER: "stream"}},
-            )
+            client.config.with_streaming_response.create().__enter__()
 
         assert _get_open_connections(self.client) == 0
 
     @mock.patch("devknot._base_client.BaseClient._calculate_retry_timeout", _low_retry_timeout)
     @pytest.mark.respx(base_url=base_url)
-    def test_retrying_status_errors_doesnt_leak(self, respx_mock: MockRouter) -> None:
+    def test_retrying_status_errors_doesnt_leak(self, respx_mock: MockRouter, client: Devknot) -> None:
         respx_mock.post("/config").mock(return_value=httpx.Response(500))
 
         with pytest.raises(APIStatusError):
-            self.client.post(
-                "/config",
-                body=cast(object, maybe_transform({}, ConfigCreateParams)),
-                cast_to=httpx.Response,
-                options={"headers": {RAW_RESPONSE_HEADER: "stream"}},
-            )
-
+            client.config.with_streaming_response.create().__enter__()
         assert _get_open_connections(self.client) == 0
 
     @pytest.mark.parametrize("failures_before_success", [0, 2, 4])
@@ -824,6 +813,55 @@ class TestDevknot:
         response = client.config.with_raw_response.create(extra_headers={"x-stainless-retry-count": "42"})
 
         assert response.http_request.headers.get("x-stainless-retry-count") == "42"
+
+    def test_proxy_environment_variables(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        # Test that the proxy environment variables are set correctly
+        monkeypatch.setenv("HTTPS_PROXY", "https://example.org")
+
+        client = DefaultHttpxClient()
+
+        mounts = tuple(client._mounts.items())
+        assert len(mounts) == 1
+        assert mounts[0][0].pattern == "https://"
+
+    @pytest.mark.filterwarnings("ignore:.*deprecated.*:DeprecationWarning")
+    def test_default_client_creation(self) -> None:
+        # Ensure that the client can be initialized without any exceptions
+        DefaultHttpxClient(
+            verify=True,
+            cert=None,
+            trust_env=True,
+            http1=True,
+            http2=False,
+            limits=httpx.Limits(max_connections=100, max_keepalive_connections=20),
+        )
+
+    @pytest.mark.respx(base_url=base_url)
+    def test_follow_redirects(self, respx_mock: MockRouter) -> None:
+        # Test that the default follow_redirects=True allows following redirects
+        respx_mock.post("/redirect").mock(
+            return_value=httpx.Response(302, headers={"Location": f"{base_url}/redirected"})
+        )
+        respx_mock.get("/redirected").mock(return_value=httpx.Response(200, json={"status": "ok"}))
+
+        response = self.client.post("/redirect", body={"key": "value"}, cast_to=httpx.Response)
+        assert response.status_code == 200
+        assert response.json() == {"status": "ok"}
+
+    @pytest.mark.respx(base_url=base_url)
+    def test_follow_redirects_disabled(self, respx_mock: MockRouter) -> None:
+        # Test that follow_redirects=False prevents following redirects
+        respx_mock.post("/redirect").mock(
+            return_value=httpx.Response(302, headers={"Location": f"{base_url}/redirected"})
+        )
+
+        with pytest.raises(APIStatusError) as exc_info:
+            self.client.post(
+                "/redirect", body={"key": "value"}, options={"follow_redirects": False}, cast_to=httpx.Response
+            )
+
+        assert exc_info.value.response.status_code == 302
+        assert exc_info.value.response.headers["Location"] == f"{base_url}/redirected"
 
 
 class TestAsyncDevknot:
@@ -961,6 +999,7 @@ class TestAsyncDevknot:
             copy_param = copy_signature.parameters.get(name)
             assert copy_param is not None, f"copy() signature is missing the {name} param"
 
+    @pytest.mark.skipif(sys.version_info >= (3, 10), reason="fails because of a memory leak that started from 3.12")
     def test_copy_build_request(self) -> None:
         options = FinalRequestOptions(method="get", url="/foo")
 
@@ -1505,32 +1544,23 @@ class TestAsyncDevknot:
 
     @mock.patch("devknot._base_client.BaseClient._calculate_retry_timeout", _low_retry_timeout)
     @pytest.mark.respx(base_url=base_url)
-    async def test_retrying_timeout_errors_doesnt_leak(self, respx_mock: MockRouter) -> None:
+    async def test_retrying_timeout_errors_doesnt_leak(
+        self, respx_mock: MockRouter, async_client: AsyncDevknot
+    ) -> None:
         respx_mock.post("/config").mock(side_effect=httpx.TimeoutException("Test timeout error"))
 
         with pytest.raises(APITimeoutError):
-            await self.client.post(
-                "/config",
-                body=cast(object, maybe_transform({}, ConfigCreateParams)),
-                cast_to=httpx.Response,
-                options={"headers": {RAW_RESPONSE_HEADER: "stream"}},
-            )
+            await async_client.config.with_streaming_response.create().__aenter__()
 
         assert _get_open_connections(self.client) == 0
 
     @mock.patch("devknot._base_client.BaseClient._calculate_retry_timeout", _low_retry_timeout)
     @pytest.mark.respx(base_url=base_url)
-    async def test_retrying_status_errors_doesnt_leak(self, respx_mock: MockRouter) -> None:
+    async def test_retrying_status_errors_doesnt_leak(self, respx_mock: MockRouter, async_client: AsyncDevknot) -> None:
         respx_mock.post("/config").mock(return_value=httpx.Response(500))
 
         with pytest.raises(APIStatusError):
-            await self.client.post(
-                "/config",
-                body=cast(object, maybe_transform({}, ConfigCreateParams)),
-                cast_to=httpx.Response,
-                options={"headers": {RAW_RESPONSE_HEADER: "stream"}},
-            )
-
+            await async_client.config.with_streaming_response.create().__aenter__()
         assert _get_open_connections(self.client) == 0
 
     @pytest.mark.parametrize("failures_before_success", [0, 2, 4])
@@ -1657,3 +1687,52 @@ class TestAsyncDevknot:
                     raise AssertionError("calling get_platform using asyncify resulted in a hung process")
 
                 time.sleep(0.1)
+
+    async def test_proxy_environment_variables(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        # Test that the proxy environment variables are set correctly
+        monkeypatch.setenv("HTTPS_PROXY", "https://example.org")
+
+        client = DefaultAsyncHttpxClient()
+
+        mounts = tuple(client._mounts.items())
+        assert len(mounts) == 1
+        assert mounts[0][0].pattern == "https://"
+
+    @pytest.mark.filterwarnings("ignore:.*deprecated.*:DeprecationWarning")
+    async def test_default_client_creation(self) -> None:
+        # Ensure that the client can be initialized without any exceptions
+        DefaultAsyncHttpxClient(
+            verify=True,
+            cert=None,
+            trust_env=True,
+            http1=True,
+            http2=False,
+            limits=httpx.Limits(max_connections=100, max_keepalive_connections=20),
+        )
+
+    @pytest.mark.respx(base_url=base_url)
+    async def test_follow_redirects(self, respx_mock: MockRouter) -> None:
+        # Test that the default follow_redirects=True allows following redirects
+        respx_mock.post("/redirect").mock(
+            return_value=httpx.Response(302, headers={"Location": f"{base_url}/redirected"})
+        )
+        respx_mock.get("/redirected").mock(return_value=httpx.Response(200, json={"status": "ok"}))
+
+        response = await self.client.post("/redirect", body={"key": "value"}, cast_to=httpx.Response)
+        assert response.status_code == 200
+        assert response.json() == {"status": "ok"}
+
+    @pytest.mark.respx(base_url=base_url)
+    async def test_follow_redirects_disabled(self, respx_mock: MockRouter) -> None:
+        # Test that follow_redirects=False prevents following redirects
+        respx_mock.post("/redirect").mock(
+            return_value=httpx.Response(302, headers={"Location": f"{base_url}/redirected"})
+        )
+
+        with pytest.raises(APIStatusError) as exc_info:
+            await self.client.post(
+                "/redirect", body={"key": "value"}, options={"follow_redirects": False}, cast_to=httpx.Response
+            )
+
+        assert exc_info.value.response.status_code == 302
+        assert exc_info.value.response.headers["Location"] == f"{base_url}/redirected"

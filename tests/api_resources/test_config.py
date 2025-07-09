@@ -210,7 +210,7 @@ class TestConfig:
                 {
                     "name": "name",
                     "bgp": {
-                        "router_id": "router_id",
+                        "router_id": "192.168.1.1",
                         "ipv4_interfaces": [
                             {
                                 "ipv4_name": "ipv4_name",
@@ -219,7 +219,7 @@ class TestConfig:
                                         "as_number": 0,
                                         "as_type": "ibgp",
                                         "name": "name",
-                                        "peer_address": "peer_address",
+                                        "peer_address": "192.168.1.1",
                                         "advanced": {
                                             "hold_time_interval": 0,
                                             "keep_alive_interval": 0,
@@ -348,13 +348,13 @@ class TestConfig:
                                                                             ],
                                                                             "include_default_gateway": True,
                                                                             "ipv4_addresses": {
-                                                                                "address": "address",
+                                                                                "address": "192.168.1.1",
                                                                                 "count": 1,
                                                                                 "prefix": 32,
                                                                                 "step": 1,
                                                                             },
                                                                             "ipv6_addresses": {
-                                                                                "address": "address",
+                                                                                "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                 "count": 1,
                                                                                 "prefix": 128,
                                                                                 "step": 1,
@@ -458,7 +458,7 @@ class TestConfig:
                                                             "aggregator": {
                                                                 "choice": "four_byte_as",
                                                                 "four_byte_as": 0,
-                                                                "ipv4_address": "ipv4_address",
+                                                                "ipv4_address": "192.168.1.1",
                                                                 "two_byte_as": 65535,
                                                             },
                                                             "as_path": {
@@ -482,7 +482,7 @@ class TestConfig:
                                                             },
                                                             "as4_aggregator": {
                                                                 "as_num": 0,
-                                                                "ipv4_address": "ipv4_address",
+                                                                "ipv4_address": "192.168.1.1",
                                                             },
                                                             "as4_path": {
                                                                 "segments": [
@@ -492,7 +492,7 @@ class TestConfig:
                                                                     }
                                                                 ]
                                                             },
-                                                            "cluster_ids": ["string"],
+                                                            "cluster_ids": ["192.168.1.1"],
                                                             "community": [
                                                                 {
                                                                     "choice": "custom_community",
@@ -548,11 +548,11 @@ class TestConfig:
                                                                     "transitive_ipv4_address_type": {
                                                                         "choice": "route_target_subtype",
                                                                         "route_origin_subtype": {
-                                                                            "global_ipv4_admin": "global_ipv4_admin",
+                                                                            "global_ipv4_admin": "192.168.1.1",
                                                                             "local_2byte_admin": 65535,
                                                                         },
                                                                         "route_target_subtype": {
-                                                                            "global_ipv4_admin": "global_ipv4_admin",
+                                                                            "global_ipv4_admin": "192.168.1.1",
                                                                             "local_2byte_admin": 65535,
                                                                         },
                                                                     },
@@ -576,11 +576,11 @@ class TestConfig:
                                                                 "ipv4_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "192.168.1.1",
                                                                 },
                                                                 "ipv4_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "192.168.1.1",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 32,
                                                                     }
@@ -588,22 +588,22 @@ class TestConfig:
                                                                 "ipv6_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                                 "ipv6_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 128,
                                                                     }
                                                                 ],
                                                                 "next_hop": {
                                                                     "choice": "ipv4",
-                                                                    "ipv4": "ipv4",
-                                                                    "ipv6": "ipv6",
+                                                                    "ipv4": "192.168.1.1",
+                                                                    "ipv6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                     "ipv6_two_addresses": {
-                                                                        "first": "first",
-                                                                        "second": "second",
+                                                                        "first": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                        "second": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                     },
                                                                 },
                                                             },
@@ -612,11 +612,11 @@ class TestConfig:
                                                                 "ipv4_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "192.168.1.1",
                                                                 },
                                                                 "ipv4_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "192.168.1.1",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 32,
                                                                     }
@@ -624,11 +624,11 @@ class TestConfig:
                                                                 "ipv6_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                                 "ipv6_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 128,
                                                                     }
@@ -637,15 +637,15 @@ class TestConfig:
                                                             "multi_exit_discriminator": {"value": 0},
                                                             "next_hop": {
                                                                 "choice": "ipv4",
-                                                                "ipv4": "ipv4",
-                                                                "ipv6": "ipv6",
+                                                                "ipv4": "192.168.1.1",
+                                                                "ipv6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 "ipv6_two_addresses": {
-                                                                    "first": "first",
-                                                                    "second": "second",
+                                                                    "first": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                    "second": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                             },
                                                             "origin": "igp",
-                                                            "originator_id": {"value": "value"},
+                                                            "originator_id": {"value": "192.168.1.1"},
                                                             "other_attributes": [
                                                                 {
                                                                     "raw_value": "raw_value",
@@ -674,7 +674,7 @@ class TestConfig:
                                                                         "srv6": {
                                                                             "flag_drop_upon_invalid": True,
                                                                             "flag_specified_bsid_only": True,
-                                                                            "ipv6_addr": "ipv6_addr",
+                                                                            "ipv6_addr": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         },
                                                                     },
                                                                     "explicit_null_label_policy": {"choice": "unknown"},
@@ -715,7 +715,7 @@ class TestConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": "srv6_sid",
+                                                                                        "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                     },
                                                                                     "type_c": {
                                                                                         "flags": {
@@ -724,7 +724,7 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv4_node_address": "ipv4_node_address",
+                                                                                        "ipv4_node_address": "192.168.1.1",
                                                                                         "sr_algorithm": 255,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -740,7 +740,7 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv6_node_address": "ipv6_node_address",
+                                                                                        "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -756,7 +756,7 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv4_node_address": "ipv4_node_address",
+                                                                                        "ipv4_node_address": "192.168.1.1",
                                                                                         "local_interface_id": 0,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -772,8 +772,8 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv4_address": "local_ipv4_address",
-                                                                                        "remote_ipv4_address": "remote_ipv4_address",
+                                                                                        "local_ipv4_address": "192.168.1.1",
+                                                                                        "remote_ipv4_address": "192.168.1.1",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -789,9 +789,9 @@ class TestConfig:
                                                                                             "v_flag": True,
                                                                                         },
                                                                                         "local_interface_id": 0,
-                                                                                        "local_ipv6_node_address": "local_ipv6_node_address",
+                                                                                        "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "remote_interface_id": 0,
-                                                                                        "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                                        "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -806,8 +806,8 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv6_address": "local_ipv6_address",
-                                                                                        "remote_ipv6_address": "remote_ipv6_address",
+                                                                                        "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                                        "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -822,7 +822,7 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv6_node_address": "ipv6_node_address",
+                                                                                        "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -831,7 +831,9 @@ class TestConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                     "type_j": {
                                                                                         "flags": {
@@ -841,9 +843,9 @@ class TestConfig:
                                                                                             "v_flag": True,
                                                                                         },
                                                                                         "local_interface_id": 0,
-                                                                                        "local_ipv6_node_address": "local_ipv6_node_address",
+                                                                                        "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "remote_interface_id": 0,
-                                                                                        "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                                        "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -852,7 +854,9 @@ class TestConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                     "type_k": {
                                                                                         "flags": {
@@ -861,8 +865,8 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv6_address": "local_ipv6_address",
-                                                                                        "remote_ipv6_address": "remote_ipv6_address",
+                                                                                        "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                                        "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -871,7 +875,9 @@ class TestConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                 }
                                                                             ],
@@ -883,7 +889,7 @@ class TestConfig:
                                                                             "flag_drop_upon_invalid": True,
                                                                             "flag_specified_bsid_only": True,
                                                                             "flag_srv6_endpoint_behavior": True,
-                                                                            "ipv6_addr": "ipv6_addr",
+                                                                            "ipv6_addr": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "endpoint_behaviour": "xxxx",
@@ -899,14 +905,14 @@ class TestConfig:
                                                         "time_gap": 0,
                                                         "traditional_reach_nlris": [
                                                             {
-                                                                "address": "address",
+                                                                "address": "192.168.1.1",
                                                                 "path_id": {"value": 0},
                                                                 "prefix": 32,
                                                             }
                                                         ],
                                                         "traditional_unreach_nlris": [
                                                             {
-                                                                "address": "address",
+                                                                "address": "192.168.1.1",
                                                                 "path_id": {"value": 0},
                                                                 "prefix": 32,
                                                             }
@@ -921,7 +927,7 @@ class TestConfig:
                                                 "add_path": {"path_id": 0},
                                                 "addresses": [
                                                     {
-                                                        "address": "address",
+                                                        "address": "192.168.1.1",
                                                         "count": 1,
                                                         "prefix": 32,
                                                         "step": 1,
@@ -1002,11 +1008,11 @@ class TestConfig:
                                                         "transitive_ipv4_address_type": {
                                                             "choice": "route_target_subtype",
                                                             "route_origin_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                             "route_target_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                         },
@@ -1024,14 +1030,14 @@ class TestConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                             }
                                         ],
                                         "v4_srte_policies": [
                                             {
-                                                "ipv4_endpoint": "ipv4_endpoint",
+                                                "ipv4_endpoint": "192.168.1.1",
                                                 "name": "name",
                                                 "active": True,
                                                 "add_path": {"path_id": 0},
@@ -1069,8 +1075,8 @@ class TestConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                                 "tunnel_tlvs": [
                                                     {
@@ -1080,7 +1086,7 @@ class TestConfig:
                                                             "binding_sid_type": "no_binding",
                                                             "four_octet_sid": 0,
                                                             "i_flag": True,
-                                                            "ipv6_sid": "ipv6_sid",
+                                                            "ipv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                             "s_flag": True,
                                                         },
                                                         "color_sub_tlv": {"color": "color"},
@@ -1093,8 +1099,8 @@ class TestConfig:
                                                         "remote_endpoint_sub_tlv": {
                                                             "address_family": "ipv4",
                                                             "as_number": 0,
-                                                            "ipv4_address": "ipv4_address",
-                                                            "ipv6_address": "ipv6_address",
+                                                            "ipv4_address": "192.168.1.1",
+                                                            "ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         },
                                                         "segment_lists": [
                                                             {
@@ -1113,7 +1119,7 @@ class TestConfig:
                                                                             "ttl": 225,
                                                                         },
                                                                         "type_b": {
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
@@ -1123,7 +1129,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_c": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -1134,7 +1140,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_d": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -1145,7 +1151,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_e": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "sr_mpls_sid": {
@@ -1156,8 +1162,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_f": {
-                                                                            "local_ipv4_address": "local_ipv4_address",
-                                                                            "remote_ipv4_address": "remote_ipv4_address",
+                                                                            "local_ipv4_address": "192.168.1.1",
+                                                                            "remote_ipv4_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -1167,8 +1173,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_g": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
@@ -1180,8 +1186,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_h": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -1191,9 +1197,9 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_i": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -1202,13 +1208,13 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_j": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -1217,11 +1223,11 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_k": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -1244,7 +1250,7 @@ class TestConfig:
                                                 "add_path": {"path_id": 0},
                                                 "addresses": [
                                                     {
-                                                        "address": "address",
+                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         "count": 1,
                                                         "prefix": 128,
                                                         "step": 1,
@@ -1325,11 +1331,11 @@ class TestConfig:
                                                         "transitive_ipv4_address_type": {
                                                             "choice": "route_target_subtype",
                                                             "route_origin_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                             "route_target_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                         },
@@ -1347,14 +1353,14 @@ class TestConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                             }
                                         ],
                                         "v6_srte_policies": [
                                             {
-                                                "ipv6_endpoint": "ipv6_endpoint",
+                                                "ipv6_endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "name": "name",
                                                 "active": True,
                                                 "add_path": {"path_id": 0},
@@ -1392,8 +1398,8 @@ class TestConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                                 "tunnel_tlvs": [
                                                     {
@@ -1403,7 +1409,7 @@ class TestConfig:
                                                             "binding_sid_type": "no_binding",
                                                             "four_octet_sid": 0,
                                                             "i_flag": True,
-                                                            "ipv6_sid": "ipv6_sid",
+                                                            "ipv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                             "s_flag": True,
                                                         },
                                                         "color_sub_tlv": {"color": "color"},
@@ -1416,8 +1422,8 @@ class TestConfig:
                                                         "remote_endpoint_sub_tlv": {
                                                             "address_family": "ipv4",
                                                             "as_number": 0,
-                                                            "ipv4_address": "ipv4_address",
-                                                            "ipv6_address": "ipv6_address",
+                                                            "ipv4_address": "192.168.1.1",
+                                                            "ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         },
                                                         "segment_lists": [
                                                             {
@@ -1436,7 +1442,7 @@ class TestConfig:
                                                                             "ttl": 225,
                                                                         },
                                                                         "type_b": {
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
@@ -1446,7 +1452,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_c": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -1457,7 +1463,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_d": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -1468,7 +1474,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_e": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "sr_mpls_sid": {
@@ -1479,8 +1485,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_f": {
-                                                                            "local_ipv4_address": "local_ipv4_address",
-                                                                            "remote_ipv4_address": "remote_ipv4_address",
+                                                                            "local_ipv4_address": "192.168.1.1",
+                                                                            "remote_ipv4_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -1490,8 +1496,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_g": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
@@ -1503,8 +1509,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_h": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -1514,9 +1520,9 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_i": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -1525,13 +1531,13 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_j": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -1540,11 +1546,11 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_k": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -1573,7 +1579,7 @@ class TestConfig:
                                         "as_number": 0,
                                         "as_type": "ibgp",
                                         "name": "name",
-                                        "peer_address": "peer_address",
+                                        "peer_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         "advanced": {
                                             "hold_time_interval": 0,
                                             "keep_alive_interval": 0,
@@ -1702,13 +1708,13 @@ class TestConfig:
                                                                             ],
                                                                             "include_default_gateway": True,
                                                                             "ipv4_addresses": {
-                                                                                "address": "address",
+                                                                                "address": "192.168.1.1",
                                                                                 "count": 1,
                                                                                 "prefix": 32,
                                                                                 "step": 1,
                                                                             },
                                                                             "ipv6_addresses": {
-                                                                                "address": "address",
+                                                                                "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                 "count": 1,
                                                                                 "prefix": 128,
                                                                                 "step": 1,
@@ -1812,7 +1818,7 @@ class TestConfig:
                                                             "aggregator": {
                                                                 "choice": "four_byte_as",
                                                                 "four_byte_as": 0,
-                                                                "ipv4_address": "ipv4_address",
+                                                                "ipv4_address": "192.168.1.1",
                                                                 "two_byte_as": 65535,
                                                             },
                                                             "as_path": {
@@ -1836,7 +1842,7 @@ class TestConfig:
                                                             },
                                                             "as4_aggregator": {
                                                                 "as_num": 0,
-                                                                "ipv4_address": "ipv4_address",
+                                                                "ipv4_address": "192.168.1.1",
                                                             },
                                                             "as4_path": {
                                                                 "segments": [
@@ -1846,7 +1852,7 @@ class TestConfig:
                                                                     }
                                                                 ]
                                                             },
-                                                            "cluster_ids": ["string"],
+                                                            "cluster_ids": ["192.168.1.1"],
                                                             "community": [
                                                                 {
                                                                     "choice": "custom_community",
@@ -1902,11 +1908,11 @@ class TestConfig:
                                                                     "transitive_ipv4_address_type": {
                                                                         "choice": "route_target_subtype",
                                                                         "route_origin_subtype": {
-                                                                            "global_ipv4_admin": "global_ipv4_admin",
+                                                                            "global_ipv4_admin": "192.168.1.1",
                                                                             "local_2byte_admin": 65535,
                                                                         },
                                                                         "route_target_subtype": {
-                                                                            "global_ipv4_admin": "global_ipv4_admin",
+                                                                            "global_ipv4_admin": "192.168.1.1",
                                                                             "local_2byte_admin": 65535,
                                                                         },
                                                                     },
@@ -1930,11 +1936,11 @@ class TestConfig:
                                                                 "ipv4_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "192.168.1.1",
                                                                 },
                                                                 "ipv4_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "192.168.1.1",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 32,
                                                                     }
@@ -1942,22 +1948,22 @@ class TestConfig:
                                                                 "ipv6_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                                 "ipv6_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 128,
                                                                     }
                                                                 ],
                                                                 "next_hop": {
                                                                     "choice": "ipv4",
-                                                                    "ipv4": "ipv4",
-                                                                    "ipv6": "ipv6",
+                                                                    "ipv4": "192.168.1.1",
+                                                                    "ipv6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                     "ipv6_two_addresses": {
-                                                                        "first": "first",
-                                                                        "second": "second",
+                                                                        "first": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                        "second": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                     },
                                                                 },
                                                             },
@@ -1966,11 +1972,11 @@ class TestConfig:
                                                                 "ipv4_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "192.168.1.1",
                                                                 },
                                                                 "ipv4_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "192.168.1.1",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 32,
                                                                     }
@@ -1978,11 +1984,11 @@ class TestConfig:
                                                                 "ipv6_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                                 "ipv6_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 128,
                                                                     }
@@ -1991,15 +1997,15 @@ class TestConfig:
                                                             "multi_exit_discriminator": {"value": 0},
                                                             "next_hop": {
                                                                 "choice": "ipv4",
-                                                                "ipv4": "ipv4",
-                                                                "ipv6": "ipv6",
+                                                                "ipv4": "192.168.1.1",
+                                                                "ipv6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 "ipv6_two_addresses": {
-                                                                    "first": "first",
-                                                                    "second": "second",
+                                                                    "first": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                    "second": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                             },
                                                             "origin": "igp",
-                                                            "originator_id": {"value": "value"},
+                                                            "originator_id": {"value": "192.168.1.1"},
                                                             "other_attributes": [
                                                                 {
                                                                     "raw_value": "raw_value",
@@ -2028,7 +2034,7 @@ class TestConfig:
                                                                         "srv6": {
                                                                             "flag_drop_upon_invalid": True,
                                                                             "flag_specified_bsid_only": True,
-                                                                            "ipv6_addr": "ipv6_addr",
+                                                                            "ipv6_addr": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         },
                                                                     },
                                                                     "explicit_null_label_policy": {"choice": "unknown"},
@@ -2069,7 +2075,7 @@ class TestConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": "srv6_sid",
+                                                                                        "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                     },
                                                                                     "type_c": {
                                                                                         "flags": {
@@ -2078,7 +2084,7 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv4_node_address": "ipv4_node_address",
+                                                                                        "ipv4_node_address": "192.168.1.1",
                                                                                         "sr_algorithm": 255,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -2094,7 +2100,7 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv6_node_address": "ipv6_node_address",
+                                                                                        "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -2110,7 +2116,7 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv4_node_address": "ipv4_node_address",
+                                                                                        "ipv4_node_address": "192.168.1.1",
                                                                                         "local_interface_id": 0,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -2126,8 +2132,8 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv4_address": "local_ipv4_address",
-                                                                                        "remote_ipv4_address": "remote_ipv4_address",
+                                                                                        "local_ipv4_address": "192.168.1.1",
+                                                                                        "remote_ipv4_address": "192.168.1.1",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -2143,9 +2149,9 @@ class TestConfig:
                                                                                             "v_flag": True,
                                                                                         },
                                                                                         "local_interface_id": 0,
-                                                                                        "local_ipv6_node_address": "local_ipv6_node_address",
+                                                                                        "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "remote_interface_id": 0,
-                                                                                        "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                                        "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -2160,8 +2166,8 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv6_address": "local_ipv6_address",
-                                                                                        "remote_ipv6_address": "remote_ipv6_address",
+                                                                                        "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                                        "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -2176,7 +2182,7 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv6_node_address": "ipv6_node_address",
+                                                                                        "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -2185,7 +2191,9 @@ class TestConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                     "type_j": {
                                                                                         "flags": {
@@ -2195,9 +2203,9 @@ class TestConfig:
                                                                                             "v_flag": True,
                                                                                         },
                                                                                         "local_interface_id": 0,
-                                                                                        "local_ipv6_node_address": "local_ipv6_node_address",
+                                                                                        "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "remote_interface_id": 0,
-                                                                                        "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                                        "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -2206,7 +2214,9 @@ class TestConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                     "type_k": {
                                                                                         "flags": {
@@ -2215,8 +2225,8 @@ class TestConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv6_address": "local_ipv6_address",
-                                                                                        "remote_ipv6_address": "remote_ipv6_address",
+                                                                                        "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                                        "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -2225,7 +2235,9 @@ class TestConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                 }
                                                                             ],
@@ -2237,7 +2249,7 @@ class TestConfig:
                                                                             "flag_drop_upon_invalid": True,
                                                                             "flag_specified_bsid_only": True,
                                                                             "flag_srv6_endpoint_behavior": True,
-                                                                            "ipv6_addr": "ipv6_addr",
+                                                                            "ipv6_addr": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "endpoint_behaviour": "xxxx",
@@ -2253,14 +2265,14 @@ class TestConfig:
                                                         "time_gap": 0,
                                                         "traditional_reach_nlris": [
                                                             {
-                                                                "address": "address",
+                                                                "address": "192.168.1.1",
                                                                 "path_id": {"value": 0},
                                                                 "prefix": 32,
                                                             }
                                                         ],
                                                         "traditional_unreach_nlris": [
                                                             {
-                                                                "address": "address",
+                                                                "address": "192.168.1.1",
                                                                 "path_id": {"value": 0},
                                                                 "prefix": 32,
                                                             }
@@ -2285,7 +2297,7 @@ class TestConfig:
                                                 "add_path": {"path_id": 0},
                                                 "addresses": [
                                                     {
-                                                        "address": "address",
+                                                        "address": "192.168.1.1",
                                                         "count": 1,
                                                         "prefix": 32,
                                                         "step": 1,
@@ -2366,11 +2378,11 @@ class TestConfig:
                                                         "transitive_ipv4_address_type": {
                                                             "choice": "route_target_subtype",
                                                             "route_origin_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                             "route_target_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                         },
@@ -2388,14 +2400,14 @@ class TestConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                             }
                                         ],
                                         "v4_srte_policies": [
                                             {
-                                                "ipv4_endpoint": "ipv4_endpoint",
+                                                "ipv4_endpoint": "192.168.1.1",
                                                 "name": "name",
                                                 "active": True,
                                                 "add_path": {"path_id": 0},
@@ -2433,8 +2445,8 @@ class TestConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                                 "tunnel_tlvs": [
                                                     {
@@ -2444,7 +2456,7 @@ class TestConfig:
                                                             "binding_sid_type": "no_binding",
                                                             "four_octet_sid": 0,
                                                             "i_flag": True,
-                                                            "ipv6_sid": "ipv6_sid",
+                                                            "ipv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                             "s_flag": True,
                                                         },
                                                         "color_sub_tlv": {"color": "color"},
@@ -2457,8 +2469,8 @@ class TestConfig:
                                                         "remote_endpoint_sub_tlv": {
                                                             "address_family": "ipv4",
                                                             "as_number": 0,
-                                                            "ipv4_address": "ipv4_address",
-                                                            "ipv6_address": "ipv6_address",
+                                                            "ipv4_address": "192.168.1.1",
+                                                            "ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         },
                                                         "segment_lists": [
                                                             {
@@ -2477,7 +2489,7 @@ class TestConfig:
                                                                             "ttl": 225,
                                                                         },
                                                                         "type_b": {
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
@@ -2487,7 +2499,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_c": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -2498,7 +2510,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_d": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -2509,7 +2521,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_e": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "sr_mpls_sid": {
@@ -2520,8 +2532,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_f": {
-                                                                            "local_ipv4_address": "local_ipv4_address",
-                                                                            "remote_ipv4_address": "remote_ipv4_address",
+                                                                            "local_ipv4_address": "192.168.1.1",
+                                                                            "remote_ipv4_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -2531,8 +2543,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_g": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
@@ -2544,8 +2556,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_h": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -2555,9 +2567,9 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_i": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -2566,13 +2578,13 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_j": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -2581,11 +2593,11 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_k": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -2608,7 +2620,7 @@ class TestConfig:
                                                 "add_path": {"path_id": 0},
                                                 "addresses": [
                                                     {
-                                                        "address": "address",
+                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         "count": 1,
                                                         "prefix": 128,
                                                         "step": 1,
@@ -2689,11 +2701,11 @@ class TestConfig:
                                                         "transitive_ipv4_address_type": {
                                                             "choice": "route_target_subtype",
                                                             "route_origin_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                             "route_target_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                         },
@@ -2711,14 +2723,14 @@ class TestConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                             }
                                         ],
                                         "v6_srte_policies": [
                                             {
-                                                "ipv6_endpoint": "ipv6_endpoint",
+                                                "ipv6_endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "name": "name",
                                                 "active": True,
                                                 "add_path": {"path_id": 0},
@@ -2756,8 +2768,8 @@ class TestConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                                 "tunnel_tlvs": [
                                                     {
@@ -2767,7 +2779,7 @@ class TestConfig:
                                                             "binding_sid_type": "no_binding",
                                                             "four_octet_sid": 0,
                                                             "i_flag": True,
-                                                            "ipv6_sid": "ipv6_sid",
+                                                            "ipv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                             "s_flag": True,
                                                         },
                                                         "color_sub_tlv": {"color": "color"},
@@ -2780,8 +2792,8 @@ class TestConfig:
                                                         "remote_endpoint_sub_tlv": {
                                                             "address_family": "ipv4",
                                                             "as_number": 0,
-                                                            "ipv4_address": "ipv4_address",
-                                                            "ipv6_address": "ipv6_address",
+                                                            "ipv4_address": "192.168.1.1",
+                                                            "ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         },
                                                         "segment_lists": [
                                                             {
@@ -2800,7 +2812,7 @@ class TestConfig:
                                                                             "ttl": 225,
                                                                         },
                                                                         "type_b": {
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
@@ -2810,7 +2822,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_c": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -2821,7 +2833,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_d": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -2832,7 +2844,7 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_e": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "sr_mpls_sid": {
@@ -2843,8 +2855,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_f": {
-                                                                            "local_ipv4_address": "local_ipv4_address",
-                                                                            "remote_ipv4_address": "remote_ipv4_address",
+                                                                            "local_ipv4_address": "192.168.1.1",
+                                                                            "remote_ipv4_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -2854,8 +2866,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_g": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
@@ -2867,8 +2879,8 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_h": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -2878,9 +2890,9 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_i": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -2889,13 +2901,13 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_j": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -2904,11 +2916,11 @@ class TestConfig:
                                                                             },
                                                                         },
                                                                         "type_k": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -2935,15 +2947,15 @@ class TestConfig:
                             {
                                 "address_pools": [
                                     {
-                                        "start_address": "start_address",
+                                        "start_address": "192.168.1.1",
                                         "count": 1,
                                         "lease_time": 10,
                                         "name": "name",
                                         "options": {
                                             "echo_relay_with_tlv_82": True,
-                                            "primary_dns_server": "primary_dns_server",
-                                            "router_address": "router_address",
-                                            "secondary_dns_server": "secondary_dns_server",
+                                            "primary_dns_server": "192.168.1.1",
+                                            "router_address": "192.168.1.1",
+                                            "secondary_dns_server": "192.168.1.1",
                                         },
                                         "prefix_length": 32,
                                         "step": 1,
@@ -2963,14 +2975,14 @@ class TestConfig:
                                             "iana": {
                                                 "prefix_len": 128,
                                                 "size": 1,
-                                                "start_address": "start_address",
+                                                "start_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "step": 1,
                                             },
                                             "ianapd": {
                                                 "iana": {
                                                     "prefix_len": 128,
                                                     "size": 1,
-                                                    "start_address": "start_address",
+                                                    "start_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                     "step": 1,
                                                 },
                                                 "iapd": {
@@ -2978,7 +2990,7 @@ class TestConfig:
                                                     "configured_prefix_len": 128,
                                                     "prefix_size": 1,
                                                     "prefix_step": 1,
-                                                    "start_prefix_address": "start_prefix_address",
+                                                    "start_prefix_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 },
                                             },
                                             "iapd": {
@@ -2986,12 +2998,12 @@ class TestConfig:
                                                 "configured_prefix_len": 128,
                                                 "prefix_size": 1,
                                                 "prefix_step": 1,
-                                                "start_prefix_address": "start_prefix_address",
+                                                "start_prefix_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                             },
                                             "iata": {
                                                 "prefix_len": 128,
                                                 "size": 1,
-                                                "start_address": "start_address",
+                                                "start_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "step": 1,
                                             },
                                         },
@@ -3009,8 +3021,8 @@ class TestConfig:
                                         "bootfile_params": [{"parameter": "parameter"}],
                                     },
                                     "dns": {
-                                        "primary": "primary",
-                                        "secondary_dns": [{"ip": "ip"}],
+                                        "primary": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "secondary_dns": [{"ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"}],
                                     },
                                     "vendor_info": {
                                         "associated_dhcp_messages": {
@@ -3055,7 +3067,7 @@ class TestConfig:
                                         "router": True,
                                         "subnet_mask": True,
                                     },
-                                    "server_address": "server_address",
+                                    "server_address": "192.168.1.1",
                                 }
                             ],
                             "dhcpv6_interfaces": [
@@ -3157,8 +3169,8 @@ class TestConfig:
                             ],
                             "ipv4_addresses": [
                                 {
-                                    "address": "address",
-                                    "gateway": "gateway",
+                                    "address": "192.168.1.1",
+                                    "gateway": "192.168.1.1",
                                     "name": "name",
                                     "gateway_mac": {
                                         "auto": "auto",
@@ -3170,8 +3182,8 @@ class TestConfig:
                             ],
                             "ipv6_addresses": [
                                 {
-                                    "address": "address",
-                                    "gateway": "gateway",
+                                    "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "gateway": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     "name": "name",
                                     "gateway_mac": {
                                         "auto": "auto",
@@ -3197,14 +3209,14 @@ class TestConfig:
                         {
                             "eth_name": "eth_name",
                             "name": "name",
-                            "address": "address",
+                            "address": "192.168.1.1",
                         }
                     ],
                     "ipv6_loopbacks": [
                         {
                             "eth_name": "eth_name",
                             "name": "name",
-                            "address": "address",
+                            "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                         }
                     ],
                     "isis": {
@@ -3304,7 +3316,7 @@ class TestConfig:
                         "basic": {
                             "enable_wide_metric": True,
                             "hostname": "hostname",
-                            "ipv4_te_router_id": "ipv4_te_router_id",
+                            "ipv4_te_router_id": "192.168.1.1",
                             "learned_lsp_filter": True,
                         },
                         "instance": {
@@ -3328,7 +3340,7 @@ class TestConfig:
                             "router_capability": {
                                 "algorithms": [0],
                                 "choice": "ipv4_te_router_id",
-                                "custom_router_cap_id": "custom_router_cap_id",
+                                "custom_router_cap_id": "192.168.1.1",
                                 "d_bit": "down",
                                 "s_bit": "flood",
                                 "sr_capability": {
@@ -3356,7 +3368,7 @@ class TestConfig:
                                 "name": "name",
                                 "addresses": [
                                     {
-                                        "address": "address",
+                                        "address": "192.168.1.1",
                                         "count": 1,
                                         "prefix": 32,
                                         "step": 1,
@@ -3389,7 +3401,7 @@ class TestConfig:
                                 "name": "name",
                                 "addresses": [
                                     {
-                                        "address": "address",
+                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         "count": 1,
                                         "prefix": 128,
                                         "step": 1,
@@ -3600,7 +3612,7 @@ class TestConfig:
                                 "area": {
                                     "id": 0,
                                     "choice": "id",
-                                    "ip": "ip",
+                                    "ip": "192.168.1.1",
                                 },
                                 "authentication": {
                                     "choice": "md5s",
@@ -3624,7 +3636,7 @@ class TestConfig:
                                 },
                                 "network_type": {
                                     "choice": "broadcast",
-                                    "point_to_multipoint": [{"neighbor_ip": "neighbor_ip"}],
+                                    "point_to_multipoint": [{"neighbor_ip": "192.168.1.1"}],
                                 },
                                 "srlg_values": [16777215],
                                 "traffic_engineering": [
@@ -3667,7 +3679,7 @@ class TestConfig:
                         "max_flood_lsu_per_burst": 1,
                         "router_id": {
                             "choice": "interface_ip",
-                            "custom": "custom",
+                            "custom": "192.168.1.1",
                         },
                         "store_lsa": True,
                         "v4_routes": [
@@ -3675,7 +3687,7 @@ class TestConfig:
                                 "name": "name",
                                 "addresses": [
                                     {
-                                        "address": "address",
+                                        "address": "192.168.1.1",
                                         "count": 1,
                                         "prefix": 32,
                                         "step": 1,
@@ -3735,7 +3747,7 @@ class TestConfig:
                                         "area": {
                                             "id": 0,
                                             "choice": "id",
-                                            "ip": "ip",
+                                            "ip": "192.168.1.1",
                                         },
                                         "instance_id": 255,
                                         "network_type": {
@@ -3766,7 +3778,7 @@ class TestConfig:
                                         "name": "name",
                                         "addresses": [
                                             {
-                                                "address": "address",
+                                                "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "count": 1,
                                                 "prefix": 128,
                                                 "step": 1,
@@ -3779,7 +3791,7 @@ class TestConfig:
                                                 "capabilities": {
                                                     "forwarding_address": {
                                                         "choice": "interface_ip",
-                                                        "custom": "custom",
+                                                        "custom": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                     },
                                                     "propagation": True,
                                                 }
@@ -3791,7 +3803,7 @@ class TestConfig:
                         ],
                         "router_id": {
                             "choice": "auto",
-                            "custom": "custom",
+                            "custom": "192.168.1.1",
                         },
                     },
                     "rocev2": {
@@ -3801,7 +3813,7 @@ class TestConfig:
                                 "ib_mtu": 0,
                                 "peers": [
                                     {
-                                        "destination_ip_address": "destination_ip_address",
+                                        "destination_ip_address": "192.168.1.1",
                                         "name": "name",
                                         "qps": [
                                             {
@@ -3830,7 +3842,7 @@ class TestConfig:
                                 "ib_mtu": 0,
                                 "peers": [
                                     {
-                                        "destination_ip_address": "destination_ip_address",
+                                        "destination_ip_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         "name": "name",
                                         "qps": [
                                             {
@@ -3858,7 +3870,7 @@ class TestConfig:
                         "ipv4_interfaces": [
                             {
                                 "ipv4_name": "ipv4_name",
-                                "neighbor_ip": "neighbor_ip",
+                                "neighbor_ip": "192.168.1.1",
                                 "bundle_threshold": 1000,
                                 "enable_hello": True,
                                 "enable_refresh_reduction": True,
@@ -3884,7 +3896,7 @@ class TestConfig:
                                 "p2p_ingress_ipv4_lsps": [
                                     {
                                         "name": "name",
-                                        "remote_address": "remote_address",
+                                        "remote_address": "192.168.1.1",
                                         "backup_lsp_id": 1,
                                         "ero": {
                                             "prefix_length": 32,
@@ -3893,7 +3905,7 @@ class TestConfig:
                                                 {
                                                     "as_number": 65535,
                                                     "hop_type": "strict",
-                                                    "ipv4_address": "ipv4_address",
+                                                    "ipv4_address": "192.168.1.1",
                                                     "prefix_length": 32,
                                                     "type": "ipv4",
                                                 }
@@ -3952,17 +3964,17 @@ class TestConfig:
                                 "vni": 1,
                                 "destination_ip_mode": {
                                     "choice": "unicast",
-                                    "multicast": {"address": "address"},
+                                    "multicast": {"address": "192.168.1.1"},
                                     "unicast": {
                                         "vteps": [
                                             {
                                                 "arp_suppression_cache": [
                                                     {
-                                                        "remote_vm_ipv4": "remote_vm_ipv4",
+                                                        "remote_vm_ipv4": "192.168.1.1",
                                                         "remote_vm_mac": "remote_vm_mac",
                                                     }
                                                 ],
-                                                "remote_vtep_address": "remote_vtep_address",
+                                                "remote_vtep_address": "192.168.1.1",
                                             }
                                         ]
                                     },
@@ -3976,17 +3988,17 @@ class TestConfig:
                                 "vni": 1,
                                 "destination_ip_mode": {
                                     "choice": "unicast",
-                                    "multicast": {"address": "address"},
+                                    "multicast": {"address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"},
                                     "unicast": {
                                         "vteps": [
                                             {
                                                 "arp_suppression_cache": [
                                                     {
-                                                        "remote_vm_ipv4": "remote_vm_ipv4",
+                                                        "remote_vm_ipv4": "192.168.1.1",
                                                         "remote_vm_mac": "remote_vm_mac",
                                                     }
                                                 ],
-                                                "remote_vtep_address": "remote_vtep_address",
+                                                "remote_vtep_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                             }
                                         ]
                                     },
@@ -4231,13 +4243,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -4246,8 +4258,8 @@ class TestConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "target_hardware_addr": {
                                     "choice": "value",
@@ -4275,13 +4287,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -4290,8 +4302,8 @@ class TestConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                             },
                             "choice": "custom",
@@ -5369,13 +5381,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -5384,8 +5396,8 @@ class TestConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "type": {
                                     "choice": "value",
@@ -5482,13 +5494,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -5499,12 +5511,12 @@ class TestConfig:
                                     ],
                                     "random": {
                                         "count": 0,
-                                        "max": "max",
-                                        "min": "min",
+                                        "max": "192.168.1.1",
+                                        "min": "192.168.1.1",
                                         "seed": 0,
                                     },
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "fragment_offset": {
                                     "choice": "value",
@@ -5915,13 +5927,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -5932,12 +5944,12 @@ class TestConfig:
                                     ],
                                     "random": {
                                         "count": 0,
-                                        "max": "max",
-                                        "min": "min",
+                                        "max": "192.168.1.1",
+                                        "min": "192.168.1.1",
                                         "seed": 0,
                                     },
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "time_to_live": {
                                     "choice": "value",
@@ -6013,13 +6025,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "metric_tags": [
                                         {
@@ -6028,8 +6040,8 @@ class TestConfig:
                                             "offset": 127,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                 },
                                 "flow_label": {
                                     "choice": "value",
@@ -6132,13 +6144,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "metric_tags": [
                                         {
@@ -6147,8 +6159,8 @@ class TestConfig:
                                             "offset": 127,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                 },
                                 "traffic_class": {
                                     "choice": "value",
@@ -6713,16 +6725,16 @@ class TestConfig:
                                                                                     "choice": "value",
                                                                                     "decrement": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
                                                                                     "increment": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
-                                                                                    "value": "value",
-                                                                                    "values": ["string"],
+                                                                                    "value": "192.168.1.1",
+                                                                                    "values": ["192.168.1.1"],
                                                                                 },
                                                                                 "l_bit": {
                                                                                     "choice": "value",
@@ -6815,16 +6827,16 @@ class TestConfig:
                                                                                     "choice": "value",
                                                                                     "decrement": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
                                                                                     "increment": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
-                                                                                    "value": "value",
-                                                                                    "values": ["string"],
+                                                                                    "value": "192.168.1.1",
+                                                                                    "values": ["192.168.1.1"],
                                                                                 },
                                                                                 "length": {
                                                                                     "auto": 0,
@@ -6888,16 +6900,16 @@ class TestConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "logical_interface_handle": {
                                                                     "choice": "value",
@@ -6930,16 +6942,16 @@ class TestConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "lsp_id": {
                                                                     "choice": "value",
@@ -7198,16 +7210,16 @@ class TestConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "choice": "as_integer",
                                                                 },
@@ -7215,16 +7227,16 @@ class TestConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "reserved": {
                                                                     "choice": "value",
@@ -7467,16 +7479,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -7605,16 +7617,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -7743,16 +7755,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -7881,16 +7893,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -8019,16 +8031,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -8157,16 +8169,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -8295,16 +8307,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -8433,16 +8445,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -9273,13 +9285,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -9288,8 +9300,8 @@ class TestConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "target_hardware_addr": {
                                     "choice": "value",
@@ -9317,13 +9329,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -9332,8 +9344,8 @@ class TestConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                             },
                             "choice": "custom",
@@ -10411,13 +10423,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -10426,8 +10438,8 @@ class TestConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "type": {
                                     "choice": "value",
@@ -10524,13 +10536,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -10541,12 +10553,12 @@ class TestConfig:
                                     ],
                                     "random": {
                                         "count": 0,
-                                        "max": "max",
-                                        "min": "min",
+                                        "max": "192.168.1.1",
+                                        "min": "192.168.1.1",
                                         "seed": 0,
                                     },
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "fragment_offset": {
                                     "choice": "value",
@@ -10957,13 +10969,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -10974,12 +10986,12 @@ class TestConfig:
                                     ],
                                     "random": {
                                         "count": 0,
-                                        "max": "max",
-                                        "min": "min",
+                                        "max": "192.168.1.1",
+                                        "min": "192.168.1.1",
                                         "seed": 0,
                                     },
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "time_to_live": {
                                     "choice": "value",
@@ -11055,13 +11067,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "metric_tags": [
                                         {
@@ -11070,8 +11082,8 @@ class TestConfig:
                                             "offset": 127,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                 },
                                 "flow_label": {
                                     "choice": "value",
@@ -11174,13 +11186,13 @@ class TestConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "metric_tags": [
                                         {
@@ -11189,8 +11201,8 @@ class TestConfig:
                                             "offset": 127,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                 },
                                 "traffic_class": {
                                     "choice": "value",
@@ -11755,16 +11767,16 @@ class TestConfig:
                                                                                     "choice": "value",
                                                                                     "decrement": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
                                                                                     "increment": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
-                                                                                    "value": "value",
-                                                                                    "values": ["string"],
+                                                                                    "value": "192.168.1.1",
+                                                                                    "values": ["192.168.1.1"],
                                                                                 },
                                                                                 "l_bit": {
                                                                                     "choice": "value",
@@ -11857,16 +11869,16 @@ class TestConfig:
                                                                                     "choice": "value",
                                                                                     "decrement": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
                                                                                     "increment": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
-                                                                                    "value": "value",
-                                                                                    "values": ["string"],
+                                                                                    "value": "192.168.1.1",
+                                                                                    "values": ["192.168.1.1"],
                                                                                 },
                                                                                 "length": {
                                                                                     "auto": 0,
@@ -11930,16 +11942,16 @@ class TestConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "logical_interface_handle": {
                                                                     "choice": "value",
@@ -11972,16 +11984,16 @@ class TestConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "lsp_id": {
                                                                     "choice": "value",
@@ -12240,16 +12252,16 @@ class TestConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "choice": "as_integer",
                                                                 },
@@ -12257,16 +12269,16 @@ class TestConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "reserved": {
                                                                     "choice": "value",
@@ -12509,16 +12521,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -12647,16 +12659,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -12785,16 +12797,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -12923,16 +12935,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -13061,16 +13073,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -13199,16 +13211,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -13337,16 +13349,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -13475,16 +13487,16 @@ class TestConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -14691,13 +14703,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -14706,8 +14718,8 @@ class TestConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "target_hardware_addr": {
                                         "choice": "value",
@@ -14735,13 +14747,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -14750,8 +14762,8 @@ class TestConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                 },
                                 "choice": "custom",
@@ -15829,13 +15841,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -15844,8 +15856,8 @@ class TestConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "type": {
                                         "choice": "value",
@@ -15942,13 +15954,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -15959,12 +15971,12 @@ class TestConfig:
                                         ],
                                         "random": {
                                             "count": 0,
-                                            "max": "max",
-                                            "min": "min",
+                                            "max": "192.168.1.1",
+                                            "min": "192.168.1.1",
                                             "seed": 0,
                                         },
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "fragment_offset": {
                                         "choice": "value",
@@ -16375,13 +16387,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -16392,12 +16404,12 @@ class TestConfig:
                                         ],
                                         "random": {
                                             "count": 0,
-                                            "max": "max",
-                                            "min": "min",
+                                            "max": "192.168.1.1",
+                                            "min": "192.168.1.1",
                                             "seed": 0,
                                         },
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "time_to_live": {
                                         "choice": "value",
@@ -16473,13 +16485,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "metric_tags": [
                                             {
@@ -16488,8 +16500,8 @@ class TestConfig:
                                                 "offset": 127,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                     },
                                     "flow_label": {
                                         "choice": "value",
@@ -16592,13 +16604,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "metric_tags": [
                                             {
@@ -16607,8 +16619,8 @@ class TestConfig:
                                                 "offset": 127,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                     },
                                     "traffic_class": {
                                         "choice": "value",
@@ -17173,16 +17185,16 @@ class TestConfig:
                                                                                         "choice": "value",
                                                                                         "decrement": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
                                                                                         "increment": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
-                                                                                        "value": "value",
-                                                                                        "values": ["string"],
+                                                                                        "value": "192.168.1.1",
+                                                                                        "values": ["192.168.1.1"],
                                                                                     },
                                                                                     "l_bit": {
                                                                                         "choice": "value",
@@ -17275,16 +17287,16 @@ class TestConfig:
                                                                                         "choice": "value",
                                                                                         "decrement": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
                                                                                         "increment": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
-                                                                                        "value": "value",
-                                                                                        "values": ["string"],
+                                                                                        "value": "192.168.1.1",
+                                                                                        "values": ["192.168.1.1"],
                                                                                     },
                                                                                     "length": {
                                                                                         "auto": 0,
@@ -17348,16 +17360,16 @@ class TestConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "logical_interface_handle": {
                                                                         "choice": "value",
@@ -17390,16 +17402,16 @@ class TestConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "lsp_id": {
                                                                         "choice": "value",
@@ -17658,16 +17670,16 @@ class TestConfig:
                                                                             "choice": "value",
                                                                             "decrement": {
                                                                                 "count": 0,
-                                                                                "start": "start",
-                                                                                "step": "step",
+                                                                                "start": "192.168.1.1",
+                                                                                "step": "192.168.1.1",
                                                                             },
                                                                             "increment": {
                                                                                 "count": 0,
-                                                                                "start": "start",
-                                                                                "step": "step",
+                                                                                "start": "192.168.1.1",
+                                                                                "step": "192.168.1.1",
                                                                             },
-                                                                            "value": "value",
-                                                                            "values": ["string"],
+                                                                            "value": "192.168.1.1",
+                                                                            "values": ["192.168.1.1"],
                                                                         },
                                                                         "choice": "as_integer",
                                                                     },
@@ -17675,16 +17687,16 @@ class TestConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "reserved": {
                                                                         "choice": "value",
@@ -17927,16 +17939,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -18065,16 +18077,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -18203,16 +18215,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -18341,16 +18353,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -18479,16 +18491,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -18617,16 +18629,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -18755,16 +18767,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -18893,16 +18905,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -19733,13 +19745,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -19748,8 +19760,8 @@ class TestConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "target_hardware_addr": {
                                         "choice": "value",
@@ -19777,13 +19789,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -19792,8 +19804,8 @@ class TestConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                 },
                                 "choice": "custom",
@@ -20871,13 +20883,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -20886,8 +20898,8 @@ class TestConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "type": {
                                         "choice": "value",
@@ -20984,13 +20996,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -21001,12 +21013,12 @@ class TestConfig:
                                         ],
                                         "random": {
                                             "count": 0,
-                                            "max": "max",
-                                            "min": "min",
+                                            "max": "192.168.1.1",
+                                            "min": "192.168.1.1",
                                             "seed": 0,
                                         },
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "fragment_offset": {
                                         "choice": "value",
@@ -21417,13 +21429,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -21434,12 +21446,12 @@ class TestConfig:
                                         ],
                                         "random": {
                                             "count": 0,
-                                            "max": "max",
-                                            "min": "min",
+                                            "max": "192.168.1.1",
+                                            "min": "192.168.1.1",
                                             "seed": 0,
                                         },
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "time_to_live": {
                                         "choice": "value",
@@ -21515,13 +21527,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "metric_tags": [
                                             {
@@ -21530,8 +21542,8 @@ class TestConfig:
                                                 "offset": 127,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                     },
                                     "flow_label": {
                                         "choice": "value",
@@ -21634,13 +21646,13 @@ class TestConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "metric_tags": [
                                             {
@@ -21649,8 +21661,8 @@ class TestConfig:
                                                 "offset": 127,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                     },
                                     "traffic_class": {
                                         "choice": "value",
@@ -22215,16 +22227,16 @@ class TestConfig:
                                                                                         "choice": "value",
                                                                                         "decrement": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
                                                                                         "increment": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
-                                                                                        "value": "value",
-                                                                                        "values": ["string"],
+                                                                                        "value": "192.168.1.1",
+                                                                                        "values": ["192.168.1.1"],
                                                                                     },
                                                                                     "l_bit": {
                                                                                         "choice": "value",
@@ -22317,16 +22329,16 @@ class TestConfig:
                                                                                         "choice": "value",
                                                                                         "decrement": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
                                                                                         "increment": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
-                                                                                        "value": "value",
-                                                                                        "values": ["string"],
+                                                                                        "value": "192.168.1.1",
+                                                                                        "values": ["192.168.1.1"],
                                                                                     },
                                                                                     "length": {
                                                                                         "auto": 0,
@@ -22390,16 +22402,16 @@ class TestConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "logical_interface_handle": {
                                                                         "choice": "value",
@@ -22432,16 +22444,16 @@ class TestConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "lsp_id": {
                                                                         "choice": "value",
@@ -22700,16 +22712,16 @@ class TestConfig:
                                                                             "choice": "value",
                                                                             "decrement": {
                                                                                 "count": 0,
-                                                                                "start": "start",
-                                                                                "step": "step",
+                                                                                "start": "192.168.1.1",
+                                                                                "step": "192.168.1.1",
                                                                             },
                                                                             "increment": {
                                                                                 "count": 0,
-                                                                                "start": "start",
-                                                                                "step": "step",
+                                                                                "start": "192.168.1.1",
+                                                                                "step": "192.168.1.1",
                                                                             },
-                                                                            "value": "value",
-                                                                            "values": ["string"],
+                                                                            "value": "192.168.1.1",
+                                                                            "values": ["192.168.1.1"],
                                                                         },
                                                                         "choice": "as_integer",
                                                                     },
@@ -22717,16 +22729,16 @@ class TestConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "reserved": {
                                                                         "choice": "value",
@@ -22969,16 +22981,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -23107,16 +23119,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -23245,16 +23257,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -23383,16 +23395,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -23521,16 +23533,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -23659,16 +23671,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -23797,16 +23809,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -23935,16 +23947,16 @@ class TestConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -24684,7 +24696,9 @@ class TestConfig:
 
 
 class TestAsyncConfig:
-    parametrize = pytest.mark.parametrize("async_client", [False, True], indirect=True, ids=["loose", "strict"])
+    parametrize = pytest.mark.parametrize(
+        "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
+    )
 
     @pytest.mark.skip()
     @parametrize
@@ -24879,7 +24893,7 @@ class TestAsyncConfig:
                 {
                     "name": "name",
                     "bgp": {
-                        "router_id": "router_id",
+                        "router_id": "192.168.1.1",
                         "ipv4_interfaces": [
                             {
                                 "ipv4_name": "ipv4_name",
@@ -24888,7 +24902,7 @@ class TestAsyncConfig:
                                         "as_number": 0,
                                         "as_type": "ibgp",
                                         "name": "name",
-                                        "peer_address": "peer_address",
+                                        "peer_address": "192.168.1.1",
                                         "advanced": {
                                             "hold_time_interval": 0,
                                             "keep_alive_interval": 0,
@@ -25017,13 +25031,13 @@ class TestAsyncConfig:
                                                                             ],
                                                                             "include_default_gateway": True,
                                                                             "ipv4_addresses": {
-                                                                                "address": "address",
+                                                                                "address": "192.168.1.1",
                                                                                 "count": 1,
                                                                                 "prefix": 32,
                                                                                 "step": 1,
                                                                             },
                                                                             "ipv6_addresses": {
-                                                                                "address": "address",
+                                                                                "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                 "count": 1,
                                                                                 "prefix": 128,
                                                                                 "step": 1,
@@ -25127,7 +25141,7 @@ class TestAsyncConfig:
                                                             "aggregator": {
                                                                 "choice": "four_byte_as",
                                                                 "four_byte_as": 0,
-                                                                "ipv4_address": "ipv4_address",
+                                                                "ipv4_address": "192.168.1.1",
                                                                 "two_byte_as": 65535,
                                                             },
                                                             "as_path": {
@@ -25151,7 +25165,7 @@ class TestAsyncConfig:
                                                             },
                                                             "as4_aggregator": {
                                                                 "as_num": 0,
-                                                                "ipv4_address": "ipv4_address",
+                                                                "ipv4_address": "192.168.1.1",
                                                             },
                                                             "as4_path": {
                                                                 "segments": [
@@ -25161,7 +25175,7 @@ class TestAsyncConfig:
                                                                     }
                                                                 ]
                                                             },
-                                                            "cluster_ids": ["string"],
+                                                            "cluster_ids": ["192.168.1.1"],
                                                             "community": [
                                                                 {
                                                                     "choice": "custom_community",
@@ -25217,11 +25231,11 @@ class TestAsyncConfig:
                                                                     "transitive_ipv4_address_type": {
                                                                         "choice": "route_target_subtype",
                                                                         "route_origin_subtype": {
-                                                                            "global_ipv4_admin": "global_ipv4_admin",
+                                                                            "global_ipv4_admin": "192.168.1.1",
                                                                             "local_2byte_admin": 65535,
                                                                         },
                                                                         "route_target_subtype": {
-                                                                            "global_ipv4_admin": "global_ipv4_admin",
+                                                                            "global_ipv4_admin": "192.168.1.1",
                                                                             "local_2byte_admin": 65535,
                                                                         },
                                                                     },
@@ -25245,11 +25259,11 @@ class TestAsyncConfig:
                                                                 "ipv4_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "192.168.1.1",
                                                                 },
                                                                 "ipv4_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "192.168.1.1",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 32,
                                                                     }
@@ -25257,22 +25271,22 @@ class TestAsyncConfig:
                                                                 "ipv6_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                                 "ipv6_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 128,
                                                                     }
                                                                 ],
                                                                 "next_hop": {
                                                                     "choice": "ipv4",
-                                                                    "ipv4": "ipv4",
-                                                                    "ipv6": "ipv6",
+                                                                    "ipv4": "192.168.1.1",
+                                                                    "ipv6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                     "ipv6_two_addresses": {
-                                                                        "first": "first",
-                                                                        "second": "second",
+                                                                        "first": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                        "second": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                     },
                                                                 },
                                                             },
@@ -25281,11 +25295,11 @@ class TestAsyncConfig:
                                                                 "ipv4_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "192.168.1.1",
                                                                 },
                                                                 "ipv4_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "192.168.1.1",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 32,
                                                                     }
@@ -25293,11 +25307,11 @@ class TestAsyncConfig:
                                                                 "ipv6_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                                 "ipv6_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 128,
                                                                     }
@@ -25306,15 +25320,15 @@ class TestAsyncConfig:
                                                             "multi_exit_discriminator": {"value": 0},
                                                             "next_hop": {
                                                                 "choice": "ipv4",
-                                                                "ipv4": "ipv4",
-                                                                "ipv6": "ipv6",
+                                                                "ipv4": "192.168.1.1",
+                                                                "ipv6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 "ipv6_two_addresses": {
-                                                                    "first": "first",
-                                                                    "second": "second",
+                                                                    "first": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                    "second": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                             },
                                                             "origin": "igp",
-                                                            "originator_id": {"value": "value"},
+                                                            "originator_id": {"value": "192.168.1.1"},
                                                             "other_attributes": [
                                                                 {
                                                                     "raw_value": "raw_value",
@@ -25343,7 +25357,7 @@ class TestAsyncConfig:
                                                                         "srv6": {
                                                                             "flag_drop_upon_invalid": True,
                                                                             "flag_specified_bsid_only": True,
-                                                                            "ipv6_addr": "ipv6_addr",
+                                                                            "ipv6_addr": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         },
                                                                     },
                                                                     "explicit_null_label_policy": {"choice": "unknown"},
@@ -25384,7 +25398,7 @@ class TestAsyncConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": "srv6_sid",
+                                                                                        "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                     },
                                                                                     "type_c": {
                                                                                         "flags": {
@@ -25393,7 +25407,7 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv4_node_address": "ipv4_node_address",
+                                                                                        "ipv4_node_address": "192.168.1.1",
                                                                                         "sr_algorithm": 255,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -25409,7 +25423,7 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv6_node_address": "ipv6_node_address",
+                                                                                        "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -25425,7 +25439,7 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv4_node_address": "ipv4_node_address",
+                                                                                        "ipv4_node_address": "192.168.1.1",
                                                                                         "local_interface_id": 0,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -25441,8 +25455,8 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv4_address": "local_ipv4_address",
-                                                                                        "remote_ipv4_address": "remote_ipv4_address",
+                                                                                        "local_ipv4_address": "192.168.1.1",
+                                                                                        "remote_ipv4_address": "192.168.1.1",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -25458,9 +25472,9 @@ class TestAsyncConfig:
                                                                                             "v_flag": True,
                                                                                         },
                                                                                         "local_interface_id": 0,
-                                                                                        "local_ipv6_node_address": "local_ipv6_node_address",
+                                                                                        "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "remote_interface_id": 0,
-                                                                                        "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                                        "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -25475,8 +25489,8 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv6_address": "local_ipv6_address",
-                                                                                        "remote_ipv6_address": "remote_ipv6_address",
+                                                                                        "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                                        "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -25491,7 +25505,7 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv6_node_address": "ipv6_node_address",
+                                                                                        "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -25500,7 +25514,9 @@ class TestAsyncConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                     "type_j": {
                                                                                         "flags": {
@@ -25510,9 +25526,9 @@ class TestAsyncConfig:
                                                                                             "v_flag": True,
                                                                                         },
                                                                                         "local_interface_id": 0,
-                                                                                        "local_ipv6_node_address": "local_ipv6_node_address",
+                                                                                        "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "remote_interface_id": 0,
-                                                                                        "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                                        "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -25521,7 +25537,9 @@ class TestAsyncConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                     "type_k": {
                                                                                         "flags": {
@@ -25530,8 +25548,8 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv6_address": "local_ipv6_address",
-                                                                                        "remote_ipv6_address": "remote_ipv6_address",
+                                                                                        "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                                        "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -25540,7 +25558,9 @@ class TestAsyncConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                 }
                                                                             ],
@@ -25552,7 +25572,7 @@ class TestAsyncConfig:
                                                                             "flag_drop_upon_invalid": True,
                                                                             "flag_specified_bsid_only": True,
                                                                             "flag_srv6_endpoint_behavior": True,
-                                                                            "ipv6_addr": "ipv6_addr",
+                                                                            "ipv6_addr": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "endpoint_behaviour": "xxxx",
@@ -25568,14 +25588,14 @@ class TestAsyncConfig:
                                                         "time_gap": 0,
                                                         "traditional_reach_nlris": [
                                                             {
-                                                                "address": "address",
+                                                                "address": "192.168.1.1",
                                                                 "path_id": {"value": 0},
                                                                 "prefix": 32,
                                                             }
                                                         ],
                                                         "traditional_unreach_nlris": [
                                                             {
-                                                                "address": "address",
+                                                                "address": "192.168.1.1",
                                                                 "path_id": {"value": 0},
                                                                 "prefix": 32,
                                                             }
@@ -25590,7 +25610,7 @@ class TestAsyncConfig:
                                                 "add_path": {"path_id": 0},
                                                 "addresses": [
                                                     {
-                                                        "address": "address",
+                                                        "address": "192.168.1.1",
                                                         "count": 1,
                                                         "prefix": 32,
                                                         "step": 1,
@@ -25671,11 +25691,11 @@ class TestAsyncConfig:
                                                         "transitive_ipv4_address_type": {
                                                             "choice": "route_target_subtype",
                                                             "route_origin_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                             "route_target_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                         },
@@ -25693,14 +25713,14 @@ class TestAsyncConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                             }
                                         ],
                                         "v4_srte_policies": [
                                             {
-                                                "ipv4_endpoint": "ipv4_endpoint",
+                                                "ipv4_endpoint": "192.168.1.1",
                                                 "name": "name",
                                                 "active": True,
                                                 "add_path": {"path_id": 0},
@@ -25738,8 +25758,8 @@ class TestAsyncConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                                 "tunnel_tlvs": [
                                                     {
@@ -25749,7 +25769,7 @@ class TestAsyncConfig:
                                                             "binding_sid_type": "no_binding",
                                                             "four_octet_sid": 0,
                                                             "i_flag": True,
-                                                            "ipv6_sid": "ipv6_sid",
+                                                            "ipv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                             "s_flag": True,
                                                         },
                                                         "color_sub_tlv": {"color": "color"},
@@ -25762,8 +25782,8 @@ class TestAsyncConfig:
                                                         "remote_endpoint_sub_tlv": {
                                                             "address_family": "ipv4",
                                                             "as_number": 0,
-                                                            "ipv4_address": "ipv4_address",
-                                                            "ipv6_address": "ipv6_address",
+                                                            "ipv4_address": "192.168.1.1",
+                                                            "ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         },
                                                         "segment_lists": [
                                                             {
@@ -25782,7 +25802,7 @@ class TestAsyncConfig:
                                                                             "ttl": 225,
                                                                         },
                                                                         "type_b": {
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
@@ -25792,7 +25812,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_c": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -25803,7 +25823,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_d": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -25814,7 +25834,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_e": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "sr_mpls_sid": {
@@ -25825,8 +25845,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_f": {
-                                                                            "local_ipv4_address": "local_ipv4_address",
-                                                                            "remote_ipv4_address": "remote_ipv4_address",
+                                                                            "local_ipv4_address": "192.168.1.1",
+                                                                            "remote_ipv4_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -25836,8 +25856,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_g": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
@@ -25849,8 +25869,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_h": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -25860,9 +25880,9 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_i": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -25871,13 +25891,13 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_j": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -25886,11 +25906,11 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_k": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -25913,7 +25933,7 @@ class TestAsyncConfig:
                                                 "add_path": {"path_id": 0},
                                                 "addresses": [
                                                     {
-                                                        "address": "address",
+                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         "count": 1,
                                                         "prefix": 128,
                                                         "step": 1,
@@ -25994,11 +26014,11 @@ class TestAsyncConfig:
                                                         "transitive_ipv4_address_type": {
                                                             "choice": "route_target_subtype",
                                                             "route_origin_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                             "route_target_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                         },
@@ -26016,14 +26036,14 @@ class TestAsyncConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                             }
                                         ],
                                         "v6_srte_policies": [
                                             {
-                                                "ipv6_endpoint": "ipv6_endpoint",
+                                                "ipv6_endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "name": "name",
                                                 "active": True,
                                                 "add_path": {"path_id": 0},
@@ -26061,8 +26081,8 @@ class TestAsyncConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                                 "tunnel_tlvs": [
                                                     {
@@ -26072,7 +26092,7 @@ class TestAsyncConfig:
                                                             "binding_sid_type": "no_binding",
                                                             "four_octet_sid": 0,
                                                             "i_flag": True,
-                                                            "ipv6_sid": "ipv6_sid",
+                                                            "ipv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                             "s_flag": True,
                                                         },
                                                         "color_sub_tlv": {"color": "color"},
@@ -26085,8 +26105,8 @@ class TestAsyncConfig:
                                                         "remote_endpoint_sub_tlv": {
                                                             "address_family": "ipv4",
                                                             "as_number": 0,
-                                                            "ipv4_address": "ipv4_address",
-                                                            "ipv6_address": "ipv6_address",
+                                                            "ipv4_address": "192.168.1.1",
+                                                            "ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         },
                                                         "segment_lists": [
                                                             {
@@ -26105,7 +26125,7 @@ class TestAsyncConfig:
                                                                             "ttl": 225,
                                                                         },
                                                                         "type_b": {
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
@@ -26115,7 +26135,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_c": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -26126,7 +26146,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_d": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -26137,7 +26157,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_e": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "sr_mpls_sid": {
@@ -26148,8 +26168,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_f": {
-                                                                            "local_ipv4_address": "local_ipv4_address",
-                                                                            "remote_ipv4_address": "remote_ipv4_address",
+                                                                            "local_ipv4_address": "192.168.1.1",
+                                                                            "remote_ipv4_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -26159,8 +26179,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_g": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
@@ -26172,8 +26192,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_h": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -26183,9 +26203,9 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_i": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -26194,13 +26214,13 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_j": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -26209,11 +26229,11 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_k": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -26242,7 +26262,7 @@ class TestAsyncConfig:
                                         "as_number": 0,
                                         "as_type": "ibgp",
                                         "name": "name",
-                                        "peer_address": "peer_address",
+                                        "peer_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         "advanced": {
                                             "hold_time_interval": 0,
                                             "keep_alive_interval": 0,
@@ -26371,13 +26391,13 @@ class TestAsyncConfig:
                                                                             ],
                                                                             "include_default_gateway": True,
                                                                             "ipv4_addresses": {
-                                                                                "address": "address",
+                                                                                "address": "192.168.1.1",
                                                                                 "count": 1,
                                                                                 "prefix": 32,
                                                                                 "step": 1,
                                                                             },
                                                                             "ipv6_addresses": {
-                                                                                "address": "address",
+                                                                                "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                 "count": 1,
                                                                                 "prefix": 128,
                                                                                 "step": 1,
@@ -26481,7 +26501,7 @@ class TestAsyncConfig:
                                                             "aggregator": {
                                                                 "choice": "four_byte_as",
                                                                 "four_byte_as": 0,
-                                                                "ipv4_address": "ipv4_address",
+                                                                "ipv4_address": "192.168.1.1",
                                                                 "two_byte_as": 65535,
                                                             },
                                                             "as_path": {
@@ -26505,7 +26525,7 @@ class TestAsyncConfig:
                                                             },
                                                             "as4_aggregator": {
                                                                 "as_num": 0,
-                                                                "ipv4_address": "ipv4_address",
+                                                                "ipv4_address": "192.168.1.1",
                                                             },
                                                             "as4_path": {
                                                                 "segments": [
@@ -26515,7 +26535,7 @@ class TestAsyncConfig:
                                                                     }
                                                                 ]
                                                             },
-                                                            "cluster_ids": ["string"],
+                                                            "cluster_ids": ["192.168.1.1"],
                                                             "community": [
                                                                 {
                                                                     "choice": "custom_community",
@@ -26571,11 +26591,11 @@ class TestAsyncConfig:
                                                                     "transitive_ipv4_address_type": {
                                                                         "choice": "route_target_subtype",
                                                                         "route_origin_subtype": {
-                                                                            "global_ipv4_admin": "global_ipv4_admin",
+                                                                            "global_ipv4_admin": "192.168.1.1",
                                                                             "local_2byte_admin": 65535,
                                                                         },
                                                                         "route_target_subtype": {
-                                                                            "global_ipv4_admin": "global_ipv4_admin",
+                                                                            "global_ipv4_admin": "192.168.1.1",
                                                                             "local_2byte_admin": 65535,
                                                                         },
                                                                     },
@@ -26599,11 +26619,11 @@ class TestAsyncConfig:
                                                                 "ipv4_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "192.168.1.1",
                                                                 },
                                                                 "ipv4_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "192.168.1.1",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 32,
                                                                     }
@@ -26611,22 +26631,22 @@ class TestAsyncConfig:
                                                                 "ipv6_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                                 "ipv6_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 128,
                                                                     }
                                                                 ],
                                                                 "next_hop": {
                                                                     "choice": "ipv4",
-                                                                    "ipv4": "ipv4",
-                                                                    "ipv6": "ipv6",
+                                                                    "ipv4": "192.168.1.1",
+                                                                    "ipv6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                     "ipv6_two_addresses": {
-                                                                        "first": "first",
-                                                                        "second": "second",
+                                                                        "first": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                        "second": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                     },
                                                                 },
                                                             },
@@ -26635,11 +26655,11 @@ class TestAsyncConfig:
                                                                 "ipv4_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "192.168.1.1",
                                                                 },
                                                                 "ipv4_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "192.168.1.1",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 32,
                                                                     }
@@ -26647,11 +26667,11 @@ class TestAsyncConfig:
                                                                 "ipv6_srpolicy": {
                                                                     "color": 0,
                                                                     "distinguisher": 0,
-                                                                    "endpoint": "endpoint",
+                                                                    "endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                                 "ipv6_unicast": [
                                                                     {
-                                                                        "address": "address",
+                                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         "path_id": {"value": 0},
                                                                         "prefix": 128,
                                                                     }
@@ -26660,15 +26680,15 @@ class TestAsyncConfig:
                                                             "multi_exit_discriminator": {"value": 0},
                                                             "next_hop": {
                                                                 "choice": "ipv4",
-                                                                "ipv4": "ipv4",
-                                                                "ipv6": "ipv6",
+                                                                "ipv4": "192.168.1.1",
+                                                                "ipv6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 "ipv6_two_addresses": {
-                                                                    "first": "first",
-                                                                    "second": "second",
+                                                                    "first": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                    "second": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                 },
                                                             },
                                                             "origin": "igp",
-                                                            "originator_id": {"value": "value"},
+                                                            "originator_id": {"value": "192.168.1.1"},
                                                             "other_attributes": [
                                                                 {
                                                                     "raw_value": "raw_value",
@@ -26697,7 +26717,7 @@ class TestAsyncConfig:
                                                                         "srv6": {
                                                                             "flag_drop_upon_invalid": True,
                                                                             "flag_specified_bsid_only": True,
-                                                                            "ipv6_addr": "ipv6_addr",
+                                                                            "ipv6_addr": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                         },
                                                                     },
                                                                     "explicit_null_label_policy": {"choice": "unknown"},
@@ -26738,7 +26758,7 @@ class TestAsyncConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": "srv6_sid",
+                                                                                        "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                     },
                                                                                     "type_c": {
                                                                                         "flags": {
@@ -26747,7 +26767,7 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv4_node_address": "ipv4_node_address",
+                                                                                        "ipv4_node_address": "192.168.1.1",
                                                                                         "sr_algorithm": 255,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -26763,7 +26783,7 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv6_node_address": "ipv6_node_address",
+                                                                                        "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -26779,7 +26799,7 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv4_node_address": "ipv4_node_address",
+                                                                                        "ipv4_node_address": "192.168.1.1",
                                                                                         "local_interface_id": 0,
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
@@ -26795,8 +26815,8 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv4_address": "local_ipv4_address",
-                                                                                        "remote_ipv4_address": "remote_ipv4_address",
+                                                                                        "local_ipv4_address": "192.168.1.1",
+                                                                                        "remote_ipv4_address": "192.168.1.1",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -26812,9 +26832,9 @@ class TestAsyncConfig:
                                                                                             "v_flag": True,
                                                                                         },
                                                                                         "local_interface_id": 0,
-                                                                                        "local_ipv6_node_address": "local_ipv6_node_address",
+                                                                                        "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "remote_interface_id": 0,
-                                                                                        "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                                        "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -26829,8 +26849,8 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv6_address": "local_ipv6_address",
-                                                                                        "remote_ipv6_address": "remote_ipv6_address",
+                                                                                        "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                                        "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_mpls_sid": {
                                                                                             "flag_bos": True,
                                                                                             "label": 1048576,
@@ -26845,7 +26865,7 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "ipv6_node_address": "ipv6_node_address",
+                                                                                        "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -26854,7 +26874,9 @@ class TestAsyncConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                     "type_j": {
                                                                                         "flags": {
@@ -26864,9 +26886,9 @@ class TestAsyncConfig:
                                                                                             "v_flag": True,
                                                                                         },
                                                                                         "local_interface_id": 0,
-                                                                                        "local_ipv6_node_address": "local_ipv6_node_address",
+                                                                                        "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "remote_interface_id": 0,
-                                                                                        "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                                        "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -26875,7 +26897,9 @@ class TestAsyncConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                     "type_k": {
                                                                                         "flags": {
@@ -26884,8 +26908,8 @@ class TestAsyncConfig:
                                                                                             "s_flag": True,
                                                                                             "v_flag": True,
                                                                                         },
-                                                                                        "local_ipv6_address": "local_ipv6_address",
-                                                                                        "remote_ipv6_address": "remote_ipv6_address",
+                                                                                        "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                                        "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                                         "sr_algorithm": 255,
                                                                                         "srv6_endpoint_behavior": {
                                                                                             "arg_length": 128,
@@ -26894,7 +26918,9 @@ class TestAsyncConfig:
                                                                                             "lb_length": 128,
                                                                                             "ln_length": 128,
                                                                                         },
-                                                                                        "srv6_sid": {"ip": "ip"},
+                                                                                        "srv6_sid": {
+                                                                                            "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+                                                                                        },
                                                                                     },
                                                                                 }
                                                                             ],
@@ -26906,7 +26932,7 @@ class TestAsyncConfig:
                                                                             "flag_drop_upon_invalid": True,
                                                                             "flag_specified_bsid_only": True,
                                                                             "flag_srv6_endpoint_behavior": True,
-                                                                            "ipv6_addr": "ipv6_addr",
+                                                                            "ipv6_addr": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "endpoint_behaviour": "xxxx",
@@ -26922,14 +26948,14 @@ class TestAsyncConfig:
                                                         "time_gap": 0,
                                                         "traditional_reach_nlris": [
                                                             {
-                                                                "address": "address",
+                                                                "address": "192.168.1.1",
                                                                 "path_id": {"value": 0},
                                                                 "prefix": 32,
                                                             }
                                                         ],
                                                         "traditional_unreach_nlris": [
                                                             {
-                                                                "address": "address",
+                                                                "address": "192.168.1.1",
                                                                 "path_id": {"value": 0},
                                                                 "prefix": 32,
                                                             }
@@ -26954,7 +26980,7 @@ class TestAsyncConfig:
                                                 "add_path": {"path_id": 0},
                                                 "addresses": [
                                                     {
-                                                        "address": "address",
+                                                        "address": "192.168.1.1",
                                                         "count": 1,
                                                         "prefix": 32,
                                                         "step": 1,
@@ -27035,11 +27061,11 @@ class TestAsyncConfig:
                                                         "transitive_ipv4_address_type": {
                                                             "choice": "route_target_subtype",
                                                             "route_origin_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                             "route_target_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                         },
@@ -27057,14 +27083,14 @@ class TestAsyncConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                             }
                                         ],
                                         "v4_srte_policies": [
                                             {
-                                                "ipv4_endpoint": "ipv4_endpoint",
+                                                "ipv4_endpoint": "192.168.1.1",
                                                 "name": "name",
                                                 "active": True,
                                                 "add_path": {"path_id": 0},
@@ -27102,8 +27128,8 @@ class TestAsyncConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                                 "tunnel_tlvs": [
                                                     {
@@ -27113,7 +27139,7 @@ class TestAsyncConfig:
                                                             "binding_sid_type": "no_binding",
                                                             "four_octet_sid": 0,
                                                             "i_flag": True,
-                                                            "ipv6_sid": "ipv6_sid",
+                                                            "ipv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                             "s_flag": True,
                                                         },
                                                         "color_sub_tlv": {"color": "color"},
@@ -27126,8 +27152,8 @@ class TestAsyncConfig:
                                                         "remote_endpoint_sub_tlv": {
                                                             "address_family": "ipv4",
                                                             "as_number": 0,
-                                                            "ipv4_address": "ipv4_address",
-                                                            "ipv6_address": "ipv6_address",
+                                                            "ipv4_address": "192.168.1.1",
+                                                            "ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         },
                                                         "segment_lists": [
                                                             {
@@ -27146,7 +27172,7 @@ class TestAsyncConfig:
                                                                             "ttl": 225,
                                                                         },
                                                                         "type_b": {
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
@@ -27156,7 +27182,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_c": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -27167,7 +27193,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_d": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -27178,7 +27204,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_e": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "sr_mpls_sid": {
@@ -27189,8 +27215,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_f": {
-                                                                            "local_ipv4_address": "local_ipv4_address",
-                                                                            "remote_ipv4_address": "remote_ipv4_address",
+                                                                            "local_ipv4_address": "192.168.1.1",
+                                                                            "remote_ipv4_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -27200,8 +27226,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_g": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
@@ -27213,8 +27239,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_h": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -27224,9 +27250,9 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_i": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -27235,13 +27261,13 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_j": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -27250,11 +27276,11 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_k": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -27277,7 +27303,7 @@ class TestAsyncConfig:
                                                 "add_path": {"path_id": 0},
                                                 "addresses": [
                                                     {
-                                                        "address": "address",
+                                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         "count": 1,
                                                         "prefix": 128,
                                                         "step": 1,
@@ -27358,11 +27384,11 @@ class TestAsyncConfig:
                                                         "transitive_ipv4_address_type": {
                                                             "choice": "route_target_subtype",
                                                             "route_origin_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                             "route_target_subtype": {
-                                                                "global_ipv4_admin": "global_ipv4_admin",
+                                                                "global_ipv4_admin": "192.168.1.1",
                                                                 "local_2byte_admin": 65535,
                                                             },
                                                         },
@@ -27380,14 +27406,14 @@ class TestAsyncConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                             }
                                         ],
                                         "v6_srte_policies": [
                                             {
-                                                "ipv6_endpoint": "ipv6_endpoint",
+                                                "ipv6_endpoint": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "name": "name",
                                                 "active": True,
                                                 "add_path": {"path_id": 0},
@@ -27425,8 +27451,8 @@ class TestAsyncConfig:
                                                     }
                                                 ],
                                                 "next_hop_address_type": "ipv4",
-                                                "next_hop_ipv4_address": "next_hop_ipv4_address",
-                                                "next_hop_ipv6_address": "next_hop_ipv6_address",
+                                                "next_hop_ipv4_address": "192.168.1.1",
+                                                "next_hop_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "next_hop_mode": "local_ip",
                                                 "tunnel_tlvs": [
                                                     {
@@ -27436,7 +27462,7 @@ class TestAsyncConfig:
                                                             "binding_sid_type": "no_binding",
                                                             "four_octet_sid": 0,
                                                             "i_flag": True,
-                                                            "ipv6_sid": "ipv6_sid",
+                                                            "ipv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                             "s_flag": True,
                                                         },
                                                         "color_sub_tlv": {"color": "color"},
@@ -27449,8 +27475,8 @@ class TestAsyncConfig:
                                                         "remote_endpoint_sub_tlv": {
                                                             "address_family": "ipv4",
                                                             "as_number": 0,
-                                                            "ipv4_address": "ipv4_address",
-                                                            "ipv6_address": "ipv6_address",
+                                                            "ipv4_address": "192.168.1.1",
+                                                            "ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                         },
                                                         "segment_lists": [
                                                             {
@@ -27469,7 +27495,7 @@ class TestAsyncConfig:
                                                                             "ttl": 225,
                                                                         },
                                                                         "type_b": {
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
@@ -27479,7 +27505,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_c": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -27490,7 +27516,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_d": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 255,
                                                                             "sr_mpls_sid": {
@@ -27501,7 +27527,7 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_e": {
-                                                                            "ipv4_node_address": "ipv4_node_address",
+                                                                            "ipv4_node_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "sr_mpls_sid": {
@@ -27512,8 +27538,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_f": {
-                                                                            "local_ipv4_address": "local_ipv4_address",
-                                                                            "remote_ipv4_address": "remote_ipv4_address",
+                                                                            "local_ipv4_address": "192.168.1.1",
+                                                                            "remote_ipv4_address": "192.168.1.1",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -27523,8 +27549,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_g": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
@@ -27536,8 +27562,8 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_h": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_mpls_sid": {
                                                                                 "label": 1048575,
@@ -27547,9 +27573,9 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_i": {
-                                                                            "ipv6_node_address": "ipv6_node_address",
+                                                                            "ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -27558,13 +27584,13 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_j": {
-                                                                            "local_ipv6_node_address": "local_ipv6_node_address",
-                                                                            "remote_ipv6_node_address": "remote_ipv6_node_address",
+                                                                            "local_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_node_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "local_interface_id": 0,
                                                                             "remote_interface_id": 0,
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -27573,11 +27599,11 @@ class TestAsyncConfig:
                                                                             },
                                                                         },
                                                                         "type_k": {
-                                                                            "local_ipv6_address": "local_ipv6_address",
-                                                                            "remote_ipv6_address": "remote_ipv6_address",
+                                                                            "local_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                                                            "remote_ipv6_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "flags": "flags",
                                                                             "sr_algorithm": 0,
-                                                                            "srv6_sid": "srv6_sid",
+                                                                            "srv6_sid": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                                             "srv6_sid_endpoint_behavior": {
                                                                                 "arg_length": 128,
                                                                                 "func_length": 128,
@@ -27604,15 +27630,15 @@ class TestAsyncConfig:
                             {
                                 "address_pools": [
                                     {
-                                        "start_address": "start_address",
+                                        "start_address": "192.168.1.1",
                                         "count": 1,
                                         "lease_time": 10,
                                         "name": "name",
                                         "options": {
                                             "echo_relay_with_tlv_82": True,
-                                            "primary_dns_server": "primary_dns_server",
-                                            "router_address": "router_address",
-                                            "secondary_dns_server": "secondary_dns_server",
+                                            "primary_dns_server": "192.168.1.1",
+                                            "router_address": "192.168.1.1",
+                                            "secondary_dns_server": "192.168.1.1",
                                         },
                                         "prefix_length": 32,
                                         "step": 1,
@@ -27632,14 +27658,14 @@ class TestAsyncConfig:
                                             "iana": {
                                                 "prefix_len": 128,
                                                 "size": 1,
-                                                "start_address": "start_address",
+                                                "start_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "step": 1,
                                             },
                                             "ianapd": {
                                                 "iana": {
                                                     "prefix_len": 128,
                                                     "size": 1,
-                                                    "start_address": "start_address",
+                                                    "start_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                     "step": 1,
                                                 },
                                                 "iapd": {
@@ -27647,7 +27673,7 @@ class TestAsyncConfig:
                                                     "configured_prefix_len": 128,
                                                     "prefix_size": 1,
                                                     "prefix_step": 1,
-                                                    "start_prefix_address": "start_prefix_address",
+                                                    "start_prefix_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 },
                                             },
                                             "iapd": {
@@ -27655,12 +27681,12 @@ class TestAsyncConfig:
                                                 "configured_prefix_len": 128,
                                                 "prefix_size": 1,
                                                 "prefix_step": 1,
-                                                "start_prefix_address": "start_prefix_address",
+                                                "start_prefix_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                             },
                                             "iata": {
                                                 "prefix_len": 128,
                                                 "size": 1,
-                                                "start_address": "start_address",
+                                                "start_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "step": 1,
                                             },
                                         },
@@ -27678,8 +27704,8 @@ class TestAsyncConfig:
                                         "bootfile_params": [{"parameter": "parameter"}],
                                     },
                                     "dns": {
-                                        "primary": "primary",
-                                        "secondary_dns": [{"ip": "ip"}],
+                                        "primary": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "secondary_dns": [{"ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"}],
                                     },
                                     "vendor_info": {
                                         "associated_dhcp_messages": {
@@ -27724,7 +27750,7 @@ class TestAsyncConfig:
                                         "router": True,
                                         "subnet_mask": True,
                                     },
-                                    "server_address": "server_address",
+                                    "server_address": "192.168.1.1",
                                 }
                             ],
                             "dhcpv6_interfaces": [
@@ -27826,8 +27852,8 @@ class TestAsyncConfig:
                             ],
                             "ipv4_addresses": [
                                 {
-                                    "address": "address",
-                                    "gateway": "gateway",
+                                    "address": "192.168.1.1",
+                                    "gateway": "192.168.1.1",
                                     "name": "name",
                                     "gateway_mac": {
                                         "auto": "auto",
@@ -27839,8 +27865,8 @@ class TestAsyncConfig:
                             ],
                             "ipv6_addresses": [
                                 {
-                                    "address": "address",
-                                    "gateway": "gateway",
+                                    "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "gateway": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     "name": "name",
                                     "gateway_mac": {
                                         "auto": "auto",
@@ -27866,14 +27892,14 @@ class TestAsyncConfig:
                         {
                             "eth_name": "eth_name",
                             "name": "name",
-                            "address": "address",
+                            "address": "192.168.1.1",
                         }
                     ],
                     "ipv6_loopbacks": [
                         {
                             "eth_name": "eth_name",
                             "name": "name",
-                            "address": "address",
+                            "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                         }
                     ],
                     "isis": {
@@ -27973,7 +27999,7 @@ class TestAsyncConfig:
                         "basic": {
                             "enable_wide_metric": True,
                             "hostname": "hostname",
-                            "ipv4_te_router_id": "ipv4_te_router_id",
+                            "ipv4_te_router_id": "192.168.1.1",
                             "learned_lsp_filter": True,
                         },
                         "instance": {
@@ -27997,7 +28023,7 @@ class TestAsyncConfig:
                             "router_capability": {
                                 "algorithms": [0],
                                 "choice": "ipv4_te_router_id",
-                                "custom_router_cap_id": "custom_router_cap_id",
+                                "custom_router_cap_id": "192.168.1.1",
                                 "d_bit": "down",
                                 "s_bit": "flood",
                                 "sr_capability": {
@@ -28025,7 +28051,7 @@ class TestAsyncConfig:
                                 "name": "name",
                                 "addresses": [
                                     {
-                                        "address": "address",
+                                        "address": "192.168.1.1",
                                         "count": 1,
                                         "prefix": 32,
                                         "step": 1,
@@ -28058,7 +28084,7 @@ class TestAsyncConfig:
                                 "name": "name",
                                 "addresses": [
                                     {
-                                        "address": "address",
+                                        "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         "count": 1,
                                         "prefix": 128,
                                         "step": 1,
@@ -28269,7 +28295,7 @@ class TestAsyncConfig:
                                 "area": {
                                     "id": 0,
                                     "choice": "id",
-                                    "ip": "ip",
+                                    "ip": "192.168.1.1",
                                 },
                                 "authentication": {
                                     "choice": "md5s",
@@ -28293,7 +28319,7 @@ class TestAsyncConfig:
                                 },
                                 "network_type": {
                                     "choice": "broadcast",
-                                    "point_to_multipoint": [{"neighbor_ip": "neighbor_ip"}],
+                                    "point_to_multipoint": [{"neighbor_ip": "192.168.1.1"}],
                                 },
                                 "srlg_values": [16777215],
                                 "traffic_engineering": [
@@ -28336,7 +28362,7 @@ class TestAsyncConfig:
                         "max_flood_lsu_per_burst": 1,
                         "router_id": {
                             "choice": "interface_ip",
-                            "custom": "custom",
+                            "custom": "192.168.1.1",
                         },
                         "store_lsa": True,
                         "v4_routes": [
@@ -28344,7 +28370,7 @@ class TestAsyncConfig:
                                 "name": "name",
                                 "addresses": [
                                     {
-                                        "address": "address",
+                                        "address": "192.168.1.1",
                                         "count": 1,
                                         "prefix": 32,
                                         "step": 1,
@@ -28404,7 +28430,7 @@ class TestAsyncConfig:
                                         "area": {
                                             "id": 0,
                                             "choice": "id",
-                                            "ip": "ip",
+                                            "ip": "192.168.1.1",
                                         },
                                         "instance_id": 255,
                                         "network_type": {
@@ -28435,7 +28461,7 @@ class TestAsyncConfig:
                                         "name": "name",
                                         "addresses": [
                                             {
-                                                "address": "address",
+                                                "address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                 "count": 1,
                                                 "prefix": 128,
                                                 "step": 1,
@@ -28448,7 +28474,7 @@ class TestAsyncConfig:
                                                 "capabilities": {
                                                     "forwarding_address": {
                                                         "choice": "interface_ip",
-                                                        "custom": "custom",
+                                                        "custom": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                                     },
                                                     "propagation": True,
                                                 }
@@ -28460,7 +28486,7 @@ class TestAsyncConfig:
                         ],
                         "router_id": {
                             "choice": "auto",
-                            "custom": "custom",
+                            "custom": "192.168.1.1",
                         },
                     },
                     "rocev2": {
@@ -28470,7 +28496,7 @@ class TestAsyncConfig:
                                 "ib_mtu": 0,
                                 "peers": [
                                     {
-                                        "destination_ip_address": "destination_ip_address",
+                                        "destination_ip_address": "192.168.1.1",
                                         "name": "name",
                                         "qps": [
                                             {
@@ -28499,7 +28525,7 @@ class TestAsyncConfig:
                                 "ib_mtu": 0,
                                 "peers": [
                                     {
-                                        "destination_ip_address": "destination_ip_address",
+                                        "destination_ip_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         "name": "name",
                                         "qps": [
                                             {
@@ -28527,7 +28553,7 @@ class TestAsyncConfig:
                         "ipv4_interfaces": [
                             {
                                 "ipv4_name": "ipv4_name",
-                                "neighbor_ip": "neighbor_ip",
+                                "neighbor_ip": "192.168.1.1",
                                 "bundle_threshold": 1000,
                                 "enable_hello": True,
                                 "enable_refresh_reduction": True,
@@ -28553,7 +28579,7 @@ class TestAsyncConfig:
                                 "p2p_ingress_ipv4_lsps": [
                                     {
                                         "name": "name",
-                                        "remote_address": "remote_address",
+                                        "remote_address": "192.168.1.1",
                                         "backup_lsp_id": 1,
                                         "ero": {
                                             "prefix_length": 32,
@@ -28562,7 +28588,7 @@ class TestAsyncConfig:
                                                 {
                                                     "as_number": 65535,
                                                     "hop_type": "strict",
-                                                    "ipv4_address": "ipv4_address",
+                                                    "ipv4_address": "192.168.1.1",
                                                     "prefix_length": 32,
                                                     "type": "ipv4",
                                                 }
@@ -28621,17 +28647,17 @@ class TestAsyncConfig:
                                 "vni": 1,
                                 "destination_ip_mode": {
                                     "choice": "unicast",
-                                    "multicast": {"address": "address"},
+                                    "multicast": {"address": "192.168.1.1"},
                                     "unicast": {
                                         "vteps": [
                                             {
                                                 "arp_suppression_cache": [
                                                     {
-                                                        "remote_vm_ipv4": "remote_vm_ipv4",
+                                                        "remote_vm_ipv4": "192.168.1.1",
                                                         "remote_vm_mac": "remote_vm_mac",
                                                     }
                                                 ],
-                                                "remote_vtep_address": "remote_vtep_address",
+                                                "remote_vtep_address": "192.168.1.1",
                                             }
                                         ]
                                     },
@@ -28645,17 +28671,17 @@ class TestAsyncConfig:
                                 "vni": 1,
                                 "destination_ip_mode": {
                                     "choice": "unicast",
-                                    "multicast": {"address": "address"},
+                                    "multicast": {"address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"},
                                     "unicast": {
                                         "vteps": [
                                             {
                                                 "arp_suppression_cache": [
                                                     {
-                                                        "remote_vm_ipv4": "remote_vm_ipv4",
+                                                        "remote_vm_ipv4": "192.168.1.1",
                                                         "remote_vm_mac": "remote_vm_mac",
                                                     }
                                                 ],
-                                                "remote_vtep_address": "remote_vtep_address",
+                                                "remote_vtep_address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                             }
                                         ]
                                     },
@@ -28900,13 +28926,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -28915,8 +28941,8 @@ class TestAsyncConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "target_hardware_addr": {
                                     "choice": "value",
@@ -28944,13 +28970,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -28959,8 +28985,8 @@ class TestAsyncConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                             },
                             "choice": "custom",
@@ -30038,13 +30064,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -30053,8 +30079,8 @@ class TestAsyncConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "type": {
                                     "choice": "value",
@@ -30151,13 +30177,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -30168,12 +30194,12 @@ class TestAsyncConfig:
                                     ],
                                     "random": {
                                         "count": 0,
-                                        "max": "max",
-                                        "min": "min",
+                                        "max": "192.168.1.1",
+                                        "min": "192.168.1.1",
                                         "seed": 0,
                                     },
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "fragment_offset": {
                                     "choice": "value",
@@ -30584,13 +30610,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -30601,12 +30627,12 @@ class TestAsyncConfig:
                                     ],
                                     "random": {
                                         "count": 0,
-                                        "max": "max",
-                                        "min": "min",
+                                        "max": "192.168.1.1",
+                                        "min": "192.168.1.1",
                                         "seed": 0,
                                     },
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "time_to_live": {
                                     "choice": "value",
@@ -30682,13 +30708,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "metric_tags": [
                                         {
@@ -30697,8 +30723,8 @@ class TestAsyncConfig:
                                             "offset": 127,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                 },
                                 "flow_label": {
                                     "choice": "value",
@@ -30801,13 +30827,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "metric_tags": [
                                         {
@@ -30816,8 +30842,8 @@ class TestAsyncConfig:
                                             "offset": 127,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                 },
                                 "traffic_class": {
                                     "choice": "value",
@@ -31382,16 +31408,16 @@ class TestAsyncConfig:
                                                                                     "choice": "value",
                                                                                     "decrement": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
                                                                                     "increment": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
-                                                                                    "value": "value",
-                                                                                    "values": ["string"],
+                                                                                    "value": "192.168.1.1",
+                                                                                    "values": ["192.168.1.1"],
                                                                                 },
                                                                                 "l_bit": {
                                                                                     "choice": "value",
@@ -31484,16 +31510,16 @@ class TestAsyncConfig:
                                                                                     "choice": "value",
                                                                                     "decrement": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
                                                                                     "increment": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
-                                                                                    "value": "value",
-                                                                                    "values": ["string"],
+                                                                                    "value": "192.168.1.1",
+                                                                                    "values": ["192.168.1.1"],
                                                                                 },
                                                                                 "length": {
                                                                                     "auto": 0,
@@ -31557,16 +31583,16 @@ class TestAsyncConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "logical_interface_handle": {
                                                                     "choice": "value",
@@ -31599,16 +31625,16 @@ class TestAsyncConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "lsp_id": {
                                                                     "choice": "value",
@@ -31867,16 +31893,16 @@ class TestAsyncConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "choice": "as_integer",
                                                                 },
@@ -31884,16 +31910,16 @@ class TestAsyncConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "reserved": {
                                                                     "choice": "value",
@@ -32136,16 +32162,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -32274,16 +32300,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -32412,16 +32438,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -32550,16 +32576,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -32688,16 +32714,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -32826,16 +32852,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -32964,16 +32990,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -33102,16 +33128,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -33942,13 +33968,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -33957,8 +33983,8 @@ class TestAsyncConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "target_hardware_addr": {
                                     "choice": "value",
@@ -33986,13 +34012,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -34001,8 +34027,8 @@ class TestAsyncConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                             },
                             "choice": "custom",
@@ -35080,13 +35106,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -35095,8 +35121,8 @@ class TestAsyncConfig:
                                             "offset": 31,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "type": {
                                     "choice": "value",
@@ -35193,13 +35219,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -35210,12 +35236,12 @@ class TestAsyncConfig:
                                     ],
                                     "random": {
                                         "count": 0,
-                                        "max": "max",
-                                        "min": "min",
+                                        "max": "192.168.1.1",
+                                        "min": "192.168.1.1",
                                         "seed": 0,
                                     },
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "fragment_offset": {
                                     "choice": "value",
@@ -35626,13 +35652,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "192.168.1.1",
+                                        "step": "192.168.1.1",
                                     },
                                     "metric_tags": [
                                         {
@@ -35643,12 +35669,12 @@ class TestAsyncConfig:
                                     ],
                                     "random": {
                                         "count": 0,
-                                        "max": "max",
-                                        "min": "min",
+                                        "max": "192.168.1.1",
+                                        "min": "192.168.1.1",
                                         "seed": 0,
                                     },
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "192.168.1.1",
+                                    "values": ["192.168.1.1"],
                                 },
                                 "time_to_live": {
                                     "choice": "value",
@@ -35724,13 +35750,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "metric_tags": [
                                         {
@@ -35739,8 +35765,8 @@ class TestAsyncConfig:
                                             "offset": 127,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                 },
                                 "flow_label": {
                                     "choice": "value",
@@ -35843,13 +35869,13 @@ class TestAsyncConfig:
                                     "choice": "value",
                                     "decrement": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "increment": {
                                         "count": 0,
-                                        "start": "start",
-                                        "step": "step",
+                                        "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     },
                                     "metric_tags": [
                                         {
@@ -35858,8 +35884,8 @@ class TestAsyncConfig:
                                             "offset": 127,
                                         }
                                     ],
-                                    "value": "value",
-                                    "values": ["string"],
+                                    "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                    "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                 },
                                 "traffic_class": {
                                     "choice": "value",
@@ -36424,16 +36450,16 @@ class TestAsyncConfig:
                                                                                     "choice": "value",
                                                                                     "decrement": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
                                                                                     "increment": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
-                                                                                    "value": "value",
-                                                                                    "values": ["string"],
+                                                                                    "value": "192.168.1.1",
+                                                                                    "values": ["192.168.1.1"],
                                                                                 },
                                                                                 "l_bit": {
                                                                                     "choice": "value",
@@ -36526,16 +36552,16 @@ class TestAsyncConfig:
                                                                                     "choice": "value",
                                                                                     "decrement": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
                                                                                     "increment": {
                                                                                         "count": 0,
-                                                                                        "start": "start",
-                                                                                        "step": "step",
+                                                                                        "start": "192.168.1.1",
+                                                                                        "step": "192.168.1.1",
                                                                                     },
-                                                                                    "value": "value",
-                                                                                    "values": ["string"],
+                                                                                    "value": "192.168.1.1",
+                                                                                    "values": ["192.168.1.1"],
                                                                                 },
                                                                                 "length": {
                                                                                     "auto": 0,
@@ -36599,16 +36625,16 @@ class TestAsyncConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "logical_interface_handle": {
                                                                     "choice": "value",
@@ -36641,16 +36667,16 @@ class TestAsyncConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "lsp_id": {
                                                                     "choice": "value",
@@ -36909,16 +36935,16 @@ class TestAsyncConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "choice": "as_integer",
                                                                 },
@@ -36926,16 +36952,16 @@ class TestAsyncConfig:
                                                                     "choice": "value",
                                                                     "decrement": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
                                                                     "increment": {
                                                                         "count": 0,
-                                                                        "start": "start",
-                                                                        "step": "step",
+                                                                        "start": "192.168.1.1",
+                                                                        "step": "192.168.1.1",
                                                                     },
-                                                                    "value": "value",
-                                                                    "values": ["string"],
+                                                                    "value": "192.168.1.1",
+                                                                    "values": ["192.168.1.1"],
                                                                 },
                                                                 "reserved": {
                                                                     "choice": "value",
@@ -37178,16 +37204,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -37316,16 +37342,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -37454,16 +37480,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -37592,16 +37618,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -37730,16 +37756,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -37868,16 +37894,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -38006,16 +38032,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -38144,16 +38170,16 @@ class TestAsyncConfig:
                                                         "choice": "value",
                                                         "decrement": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
                                                         "increment": {
                                                             "count": 0,
-                                                            "start": "start",
-                                                            "step": "step",
+                                                            "start": "192.168.1.1",
+                                                            "step": "192.168.1.1",
                                                         },
-                                                        "value": "value",
-                                                        "values": ["string"],
+                                                        "value": "192.168.1.1",
+                                                        "values": ["192.168.1.1"],
                                                     },
                                                     "object_identifier_value": "object_identifier_value",
                                                     "string_value": {
@@ -39360,13 +39386,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -39375,8 +39401,8 @@ class TestAsyncConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "target_hardware_addr": {
                                         "choice": "value",
@@ -39404,13 +39430,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -39419,8 +39445,8 @@ class TestAsyncConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                 },
                                 "choice": "custom",
@@ -40498,13 +40524,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -40513,8 +40539,8 @@ class TestAsyncConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "type": {
                                         "choice": "value",
@@ -40611,13 +40637,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -40628,12 +40654,12 @@ class TestAsyncConfig:
                                         ],
                                         "random": {
                                             "count": 0,
-                                            "max": "max",
-                                            "min": "min",
+                                            "max": "192.168.1.1",
+                                            "min": "192.168.1.1",
                                             "seed": 0,
                                         },
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "fragment_offset": {
                                         "choice": "value",
@@ -41044,13 +41070,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -41061,12 +41087,12 @@ class TestAsyncConfig:
                                         ],
                                         "random": {
                                             "count": 0,
-                                            "max": "max",
-                                            "min": "min",
+                                            "max": "192.168.1.1",
+                                            "min": "192.168.1.1",
                                             "seed": 0,
                                         },
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "time_to_live": {
                                         "choice": "value",
@@ -41142,13 +41168,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "metric_tags": [
                                             {
@@ -41157,8 +41183,8 @@ class TestAsyncConfig:
                                                 "offset": 127,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                     },
                                     "flow_label": {
                                         "choice": "value",
@@ -41261,13 +41287,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "metric_tags": [
                                             {
@@ -41276,8 +41302,8 @@ class TestAsyncConfig:
                                                 "offset": 127,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                     },
                                     "traffic_class": {
                                         "choice": "value",
@@ -41842,16 +41868,16 @@ class TestAsyncConfig:
                                                                                         "choice": "value",
                                                                                         "decrement": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
                                                                                         "increment": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
-                                                                                        "value": "value",
-                                                                                        "values": ["string"],
+                                                                                        "value": "192.168.1.1",
+                                                                                        "values": ["192.168.1.1"],
                                                                                     },
                                                                                     "l_bit": {
                                                                                         "choice": "value",
@@ -41944,16 +41970,16 @@ class TestAsyncConfig:
                                                                                         "choice": "value",
                                                                                         "decrement": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
                                                                                         "increment": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
-                                                                                        "value": "value",
-                                                                                        "values": ["string"],
+                                                                                        "value": "192.168.1.1",
+                                                                                        "values": ["192.168.1.1"],
                                                                                     },
                                                                                     "length": {
                                                                                         "auto": 0,
@@ -42017,16 +42043,16 @@ class TestAsyncConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "logical_interface_handle": {
                                                                         "choice": "value",
@@ -42059,16 +42085,16 @@ class TestAsyncConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "lsp_id": {
                                                                         "choice": "value",
@@ -42327,16 +42353,16 @@ class TestAsyncConfig:
                                                                             "choice": "value",
                                                                             "decrement": {
                                                                                 "count": 0,
-                                                                                "start": "start",
-                                                                                "step": "step",
+                                                                                "start": "192.168.1.1",
+                                                                                "step": "192.168.1.1",
                                                                             },
                                                                             "increment": {
                                                                                 "count": 0,
-                                                                                "start": "start",
-                                                                                "step": "step",
+                                                                                "start": "192.168.1.1",
+                                                                                "step": "192.168.1.1",
                                                                             },
-                                                                            "value": "value",
-                                                                            "values": ["string"],
+                                                                            "value": "192.168.1.1",
+                                                                            "values": ["192.168.1.1"],
                                                                         },
                                                                         "choice": "as_integer",
                                                                     },
@@ -42344,16 +42370,16 @@ class TestAsyncConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "reserved": {
                                                                         "choice": "value",
@@ -42596,16 +42622,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -42734,16 +42760,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -42872,16 +42898,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -43010,16 +43036,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -43148,16 +43174,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -43286,16 +43312,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -43424,16 +43450,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -43562,16 +43588,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -44402,13 +44428,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -44417,8 +44443,8 @@ class TestAsyncConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "target_hardware_addr": {
                                         "choice": "value",
@@ -44446,13 +44472,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -44461,8 +44487,8 @@ class TestAsyncConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                 },
                                 "choice": "custom",
@@ -45540,13 +45566,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -45555,8 +45581,8 @@ class TestAsyncConfig:
                                                 "offset": 31,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "type": {
                                         "choice": "value",
@@ -45653,13 +45679,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -45670,12 +45696,12 @@ class TestAsyncConfig:
                                         ],
                                         "random": {
                                             "count": 0,
-                                            "max": "max",
-                                            "min": "min",
+                                            "max": "192.168.1.1",
+                                            "min": "192.168.1.1",
                                             "seed": 0,
                                         },
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "fragment_offset": {
                                         "choice": "value",
@@ -46086,13 +46112,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "192.168.1.1",
+                                            "step": "192.168.1.1",
                                         },
                                         "metric_tags": [
                                             {
@@ -46103,12 +46129,12 @@ class TestAsyncConfig:
                                         ],
                                         "random": {
                                             "count": 0,
-                                            "max": "max",
-                                            "min": "min",
+                                            "max": "192.168.1.1",
+                                            "min": "192.168.1.1",
                                             "seed": 0,
                                         },
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "192.168.1.1",
+                                        "values": ["192.168.1.1"],
                                     },
                                     "time_to_live": {
                                         "choice": "value",
@@ -46184,13 +46210,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "metric_tags": [
                                             {
@@ -46199,8 +46225,8 @@ class TestAsyncConfig:
                                                 "offset": 127,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                     },
                                     "flow_label": {
                                         "choice": "value",
@@ -46303,13 +46329,13 @@ class TestAsyncConfig:
                                         "choice": "value",
                                         "decrement": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "increment": {
                                             "count": 0,
-                                            "start": "start",
-                                            "step": "step",
+                                            "start": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                            "step": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                         },
                                         "metric_tags": [
                                             {
@@ -46318,8 +46344,8 @@ class TestAsyncConfig:
                                                 "offset": 127,
                                             }
                                         ],
-                                        "value": "value",
-                                        "values": ["string"],
+                                        "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                                        "values": ["2001:0db8:85a3:0000:0000:8a2e:0370:7334"],
                                     },
                                     "traffic_class": {
                                         "choice": "value",
@@ -46884,16 +46910,16 @@ class TestAsyncConfig:
                                                                                         "choice": "value",
                                                                                         "decrement": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
                                                                                         "increment": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
-                                                                                        "value": "value",
-                                                                                        "values": ["string"],
+                                                                                        "value": "192.168.1.1",
+                                                                                        "values": ["192.168.1.1"],
                                                                                     },
                                                                                     "l_bit": {
                                                                                         "choice": "value",
@@ -46986,16 +47012,16 @@ class TestAsyncConfig:
                                                                                         "choice": "value",
                                                                                         "decrement": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
                                                                                         "increment": {
                                                                                             "count": 0,
-                                                                                            "start": "start",
-                                                                                            "step": "step",
+                                                                                            "start": "192.168.1.1",
+                                                                                            "step": "192.168.1.1",
                                                                                         },
-                                                                                        "value": "value",
-                                                                                        "values": ["string"],
+                                                                                        "value": "192.168.1.1",
+                                                                                        "values": ["192.168.1.1"],
                                                                                     },
                                                                                     "length": {
                                                                                         "auto": 0,
@@ -47059,16 +47085,16 @@ class TestAsyncConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "logical_interface_handle": {
                                                                         "choice": "value",
@@ -47101,16 +47127,16 @@ class TestAsyncConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "lsp_id": {
                                                                         "choice": "value",
@@ -47369,16 +47395,16 @@ class TestAsyncConfig:
                                                                             "choice": "value",
                                                                             "decrement": {
                                                                                 "count": 0,
-                                                                                "start": "start",
-                                                                                "step": "step",
+                                                                                "start": "192.168.1.1",
+                                                                                "step": "192.168.1.1",
                                                                             },
                                                                             "increment": {
                                                                                 "count": 0,
-                                                                                "start": "start",
-                                                                                "step": "step",
+                                                                                "start": "192.168.1.1",
+                                                                                "step": "192.168.1.1",
                                                                             },
-                                                                            "value": "value",
-                                                                            "values": ["string"],
+                                                                            "value": "192.168.1.1",
+                                                                            "values": ["192.168.1.1"],
                                                                         },
                                                                         "choice": "as_integer",
                                                                     },
@@ -47386,16 +47412,16 @@ class TestAsyncConfig:
                                                                         "choice": "value",
                                                                         "decrement": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
                                                                         "increment": {
                                                                             "count": 0,
-                                                                            "start": "start",
-                                                                            "step": "step",
+                                                                            "start": "192.168.1.1",
+                                                                            "step": "192.168.1.1",
                                                                         },
-                                                                        "value": "value",
-                                                                        "values": ["string"],
+                                                                        "value": "192.168.1.1",
+                                                                        "values": ["192.168.1.1"],
                                                                     },
                                                                     "reserved": {
                                                                         "choice": "value",
@@ -47638,16 +47664,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -47776,16 +47802,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -47914,16 +47940,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -48052,16 +48078,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -48190,16 +48216,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -48328,16 +48354,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -48466,16 +48492,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
@@ -48604,16 +48630,16 @@ class TestAsyncConfig:
                                                             "choice": "value",
                                                             "decrement": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
                                                             "increment": {
                                                                 "count": 0,
-                                                                "start": "start",
-                                                                "step": "step",
+                                                                "start": "192.168.1.1",
+                                                                "step": "192.168.1.1",
                                                             },
-                                                            "value": "value",
-                                                            "values": ["string"],
+                                                            "value": "192.168.1.1",
+                                                            "values": ["192.168.1.1"],
                                                         },
                                                         "object_identifier_value": "object_identifier_value",
                                                         "string_value": {
